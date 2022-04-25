@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./public/css/app.css">
 
     <title>Les chefs</title>
+    <script src="./node_modules/@popperjs/core/dist/umd/popper.js" defer></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js" defer></script>
 </head>
 
 <body>
@@ -42,22 +44,82 @@
         <!-- Le hero contient le H1, les boutons cta, ainsi que les boutons du carousels -->
         <div class="hero">
 
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <h1 class="heading__primary">Whatever your
+                            <span class="heading__primary-occasion">occasion, </span><span
+                                class="heading__primary-taste">taste
+                            </span><span class="heading__primary-makes">makes </span>it one to
+                            <span class="heading__primary-remember">remember!</span>
+                        </h1>
+
+                    </div>
+                    <div class="carousel-item">
+                        <h1 class="heading__primary">Whatever your
+                            <span class="heading__primary-occasion">occasion, </span><span
+                                class="heading__primary-taste">taste
+                            </span><span class="heading__primary-makes">makes </span>it one to
+                            <span class="heading__primary-remember">remember!</span>
+                        </h1>
+
+                    </div>
+                    <div class="carousel-item">
+                        <h1 class="heading__primary">Whatever your
+                            <span class="heading__primary-occasion">occasion, </span><span
+                                class="heading__primary-taste">taste
+                            </span><span class="heading__primary-makes">makes </span>it one to
+                            <span class="heading__primary-remember">remember!</span>
+                        </h1>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="hero__btn-box">
+                <button><a class=" hero__btn-link hero__btn-link-purchase" href="#">purchase theme</a></button>
+                <button><a class=" hero__btn-link hero__btn-link-more" href="#">learn more</a></button>
+            </div>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
             <!-- chaque effet de mot est marqué par une classe correspondante, le styling de cette pertie ce trouve dans le header -->
-            <h1 class="heading-primary">Whatever your
-                <span class="heading-primary-occasion">occasion, </span><span class="heading-primary-taste">taste
-                </span><span class="heading-primary-makes">makes </span>it one to
-                <span class="heading-primary-remember">remember</span>
-            </h1>
-            <div class="hero-btns">
-                <button><a class=" hero-btn-link" href="">purchase theme</a></button> <button><a class=" hero-btn-link"
-                        href="">learn more</a></button>
-            </div>
-            <div class="carousel-btn">
-                <a href=""></a><a href=""></a><a href=""></a>
-            </div>
+
+
+
         </div>
     </header>
-    <main></main>
+    <main>
+        <section class="info">
+            <div class="info__container">
+                <article class="info__about">
+
+
+                    <h2 class="heading__secondary"><span class="heading__secondary-red">our </span>Story</h2>
+
+
+                </article>
+                <article class="info__menu">
+
+                </article>
+
+
+            </div>
+
+        </section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+
+    </main>
 
 </body>
 

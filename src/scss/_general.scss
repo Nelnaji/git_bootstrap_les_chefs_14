@@ -1,6 +1,7 @@
 // les resets de la page ont utilise box-sizing inherit dans les petits cas ou nous aurions a mettre un element en content-box
 
 @use "./fonts";
+@use "./variables"as *;
 
 *,
 *:after,
@@ -18,4 +19,20 @@ html {
 
 body {
     font-family: "Roboto", sans-serif;
+}
+
+
+
+// Styling of the secondary headings
+
+.heading__secondary {
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Courgette";
+
+    .heading__secondary-red {
+        text-transform: uppercase;
+        color: $red;
+        font-size: 5rem;
+    }
 }

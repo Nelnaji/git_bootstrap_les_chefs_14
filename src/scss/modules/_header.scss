@@ -1,13 +1,19 @@
 // styling de l'image de l'hero
 
-@use "../variables"as *;
 
 .header__bg-img {
-    height: 100vh;
+    height: 102vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
         url(../img/banner1.jpg);
-    background-position: center center;
     background-size: cover;
+    background-position: center;
+
+
+    // cette partie sert a mettre en bordure la petite image pour l'effet bombé
+    border-bottom: 1.5rem solid transparent;
+    border-image: url(../img/bottom_decoration_img.png) repeat;
+    border-image-slice: 30;
+
 }
 
 
@@ -28,13 +34,13 @@
 
 
 
-        a,
+        a:link,
         a:visited {
             text-decoration: none;
             text-transform: uppercase;
             color: $white;
             padding: 2rem 2.2rem;
-            transition: .3s;
+            transition: all .3s;
             background-color: none;
 
             &:hover {
@@ -47,4 +53,100 @@
             }
         }
     }
+}
+
+
+// styling du hero contenant le titre, les boutons d'appel a l'acte, ainsi que les boutons du carousel
+
+.hero {
+    padding-top: 6.4rem;
+    display: flex;
+    flex-direction: column;
+    color: $white;
+    align-items: center;
+    text-align: center;
+
+
+
+    h1 {
+        font-family: "Courgette", Brush Script MT;
+        font-size: 3rem;
+        width: 40%;
+        margin-inline: auto;
+
+
+        .heading__primary-occasion {
+            font-size: 6rem;
+            text-transform: uppercase;
+        }
+
+        .heading__primary-taste {
+            font-size: 6rem;
+            text-transform: uppercase;
+            color: $red;
+
+        }
+
+        .heading__primary-makes {
+            font-size: 6rem;
+
+        }
+
+        .heading__primary-remember {
+            font-size: 6rem;
+        }
+
+    }
+
+}
+
+// styling des buttons du hero 
+
+.hero__btn-box {
+    margin-top: 3rem;
+    display: flex;
+    gap: 2rem;
+
+    button {
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 10rem;
+
+        .hero__btn-link:visited,
+        .hero__btn-link:link {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+        }
+
+        .hero__btn-link-purchase:link,
+        .hero__btn-link-purchase:visited {
+            color: black;
+        }
+
+        .hero__btn-link-more:link,
+        .hero__btn-link-more:visited {
+            color: $white;
+        }
+
+        &:last-child {
+            background-color: $red;
+            transition: .2s;
+        }
+
+        &:last-child:hover {
+            background-color: $red-hover;
+        }
+    }
+
+
+}
+
+//changement des indicateurs du carousel pour qu'ils soient rond.
+.carousel-indicators [data-bs-target] {
+    width: 1rem;
+    /* change width */
+    height: 1rem;
+    /* change height */
+    border-radius: 50%; // /* add border-radius */
 }
