@@ -10183,14 +10183,27 @@ readers do not read off random characters that represent icons */
 }
 .header__nav .header__nav-box {
   display: flex;
-  gap: 1rem;
   font-size: 1.4rem;
   border-top: 1px solid hsl(0deg, 0%, 100%);
   border-bottom: 1px solid hsl(0deg, 0%, 100%);
 }
-.header__nav .header__nav-box a {
+.header__nav .header__nav-box a,
+.header__nav .header__nav-box a:visited {
   text-decoration: none;
   text-transform: uppercase;
+  color: hsl(0deg, 0%, 100%);
+  padding: 2rem 2.2rem;
+  transition: 0.3s;
+  background-color: none;
+}
+.header__nav .header__nav-box a:hover,
+.header__nav .header__nav-box a:visited:hover {
+  background-color: hsl(352deg, 62%, 57%);
+}
+.header__nav .header__nav-box a:active, .header__nav .header__nav-box a:focus,
+.header__nav .header__nav-box a:visited:active,
+.header__nav .header__nav-box a:visited:focus {
+  background-color: hsl(352deg, 62%, 47%);
 }
 
 /*# sourceMappingURL=app.css.map */
