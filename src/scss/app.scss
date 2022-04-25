@@ -1,1 +1,7 @@
-@import "./modules/header";
+// c'est ce gros fichier que nous compilons en app.css
+@use "./fonts";
+@use "./general";
+@use "./variables";
+@use "./icons";
+@use "../../node_modules/bootstrap/scss/bootstrap.scss";
+@use "./modules/header";

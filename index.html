@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- lien vers le css -->
+    <link rel="stylesheet" href="./public/css/app.css">
+
+    <title>Les chefs</title>
+</head>
+
+<body>
+    <!-- j'utilise au plus possible la convention BEM pour nommer mes .classes et #ID's -->
+    <!-- le .header contient l'image en background la nav le h1, en gros toute la section Hero -->
+    <header class="header header__bg-img">
+
+        <!-- Navigation principale en flex-box le code de styling ce trouve dans le header.scss -->
+
+        <nav class="header__nav">
+            <!-- les 4 premiers liens de la nav -->
+            <div class="header__nav-box">
+                <a href="#" class="header__nav-box-link">home</a>
+                <a href="#" class="header__nav-box-link">about us</a>
+                <a href="#" class="header__nav-box-link">menu list</a>
+                <a href="#" class="header__nav-box-link">team</a>
+            </div>
+
+            <a class="header__nav-logo-link" href=""><img class="header__nav-logo" src="./public/img/logo.png"
+                    alt=""></a>
+            <!-- les 4 derniers liens de la nav -->
+            <div class="header__nav-box">
+                <a href="" class="header__nav-box-link">reservation</a>
+                <a href="" class="header__nav-box-link">blog</a>
+                <a href="" class="header__nav-box-link">testimonials</a>
+                <a href="" class="header__nav-box-link">contact us</a>
+            </div>
+        </nav>
+
+
+        <!-- Le hero contient le H1, les boutons cta, ainsi que les boutons du carousels -->
+        <div class="hero">
+
+            <!-- chaque effet de mot est marqué par une classe correspondante, le styling de cette pertie ce trouve dans le header -->
+            <h1 class="heading-primary">Whatever your
+                <span class="heading-primary-occasion">occasion, </span><span class="heading-primary-taste">taste
+                </span><span class="heading-primary-makes">makes </span>it one to
+                <span class="heading-primary-remember">remember</span>
+            </h1>
+            <div class="hero-btns">
+                <button><a class=" hero-btn-link" href="">purchase theme</a></button> <button><a class=" hero-btn-link"
+                        href="">learn more</a></button>
+            </div>
+            <div class="carousel-btn">
+                <a href=""></a><a href=""></a><a href=""></a>
+            </div>
+        </div>
+    </header>
+    <main></main>
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "git_bootstrap_les_chefs_14",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nelnaji/git_bootstrap_les_chefs_14.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nelnaji/git_bootstrap_les_chefs_14/issues"
+  },
+  "homepage": "https://github.com/Nelnaji/git_bootstrap_les_chefs_14#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.1",
+    "@popperjs/core": "^2.11.5",
+    "bootstrap": "^5.1.3"
+  }
+}

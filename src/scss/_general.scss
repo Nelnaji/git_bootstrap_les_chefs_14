@@ -1,0 +1,20 @@
+// les resets de la page ont utilise box-sizing inherit dans les petits cas ou nous aurions a mettre un element en content-box
+
+@use "./fonts";
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}

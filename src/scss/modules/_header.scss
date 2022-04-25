@@ -1,0 +1,35 @@
+// styling de l'image de l'hero
+
+@use "../variables"as *;
+
+.header__bg-img {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url(../img/banner1.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+
+// styling de la barre de navigation
+.header__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    gap: 4rem;
+
+    .header__nav-box {
+        display: flex;
+        gap: 1rem;
+        font-size: 1.4rem;
+        border-top: 1px solid $white;
+        border-bottom: 1px solid $white;
+
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+
+        }
+    }
+}
