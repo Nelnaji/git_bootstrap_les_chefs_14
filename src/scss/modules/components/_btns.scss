@@ -1,0 +1,15 @@
+.btn-perso:link,
+.btn-perso:visited {
+  padding: 1.6rem 3rem;
+  border: none;
+  border-radius: 10rem;
+  background-color: $red;
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  transition: 0.2s;
+}
+.btn-perso:hover {
+  background-color: $red-hover;
+}

@@ -1,0 +1,46 @@
+.blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  margin: 5rem;
+  .card-box {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.img-card {
+  position: relative;
+
+  img {
+    border: 0.7rem solid $b-img;
+    border-radius: 1.4rem;
+  }
+  p {
+    bottom: -1.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    color: $white;
+    background-color: $red;
+    padding: 1.4rem 1rem;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    width: 70%;
+    b {
+      font-size: 2.4rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  .text-card {
+    display: flex;
+    flex-direction: column;
+  }
+}

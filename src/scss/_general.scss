@@ -19,22 +19,3 @@ html {
 body {
   font-family: "Roboto", sans-serif;
 }
-
-// Styling of the secondary headings
-
-.heading__secondary {
-  font-size: 3.4rem;
-  font-family: "Courgette";
-
-  //   this add the border bottom with the image
-  border-bottom: 1.5rem solid transparent;
-  border-image-source: url(../img/decoration_line.png);
-  border-image-slice: 100 fill;
-  border-image-outset: 0 2rem;
-  margin: 2rem 0;
-  .heading__secondary-red {
-    text-transform: uppercase;
-    color: $red;
-    font-size: 5rem;
-  }
-}

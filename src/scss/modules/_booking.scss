@@ -1,0 +1,44 @@
+.booking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+.form-container {
+  color: $white;
+  background-image: url(../img/book_table_bg.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8rem;
+  font-size: 2rem;
+  width: 60%;
+  border-radius: 1.4rem;
+  padding: 8rem 0;
+  p {
+    span {
+      font-size: 3rem;
+    }
+  }
+}
+
+.form-grid {
+  display: flex;
+  gap: 4rem;
+
+  .sub-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    input,
+    select {
+      border-radius: 1.2rem;
+      padding: 1.6rem;
+      padding-right: 20rem;
+      color: black;
+      border: none;
+    }
+  }
+}
