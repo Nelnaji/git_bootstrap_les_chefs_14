@@ -1,0 +1,28 @@
+.chef {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../img/team_background.jpg);
+  background-size: cover;
+  .heading__secondary {
+    color: $white;
+  }
+  .chef__box {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+  }
+}
+.chef-person {
+  img {
+    border-bottom: 1px solid $b-grey-d;
+  }
+  p {
+    font-size: 1.6rem;
+    color: $white;
+  }
+}

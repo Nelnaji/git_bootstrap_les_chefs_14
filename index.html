@@ -1,126 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- lien vers le css -->
-    <link rel="stylesheet" href="./public/css/app.css">
+    <link rel="stylesheet" href="./public/css/app.css" />
 
     <title>Les chefs</title>
-    <script src="./node_modules/@popperjs/core/dist/umd/popper.js" defer></script>
+    <script
+      src="./node_modules/@popperjs/core/dist/umd/popper.js"
+      defer
+    ></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- j'utilise au plus possible la convention BEM pour nommer mes .classes et #ID's -->
     <!-- le .header contient l'image en background la nav le h1, en gros toute la section Hero -->
     <header class="header header__bg-img">
+      <!-- Navigation principale en flex-box le code de styling ce trouve dans le header.scss -->
 
-        <!-- Navigation principale en flex-box le code de styling ce trouve dans le header.scss -->
-
-        <nav class="header__nav">
-            <!-- les 4 premiers liens de la nav -->
-            <div class="header__nav-box">
-                <a href="#" class="header__nav-box-link">home</a>
-                <a href="#" class="header__nav-box-link">about us</a>
-                <a href="#" class="header__nav-box-link">menu list</a>
-                <a href="#" class="header__nav-box-link">team</a>
-            </div>
-
-            <a class="header__nav-logo-link" href=""><img class="header__nav-logo" src="./public/img/logo.png"
-                    alt=""></a>
-            <!-- les 4 derniers liens de la nav -->
-            <div class="header__nav-box">
-                <a href="#" class="header__nav-box-link">reservation</a>
-                <a href="#" class="header__nav-box-link">blog</a>
-                <a href="#" class="header__nav-box-link">testimonials</a>
-                <a href="#" class="header__nav-box-link">contact us</a>
-            </div>
-        </nav>
-
-
-        <!-- Le hero contient le H1, les boutons cta, ainsi que les boutons du carousels -->
-        <div class="hero">
-
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <h1 class="heading__primary">Whatever your
-                            <span class="heading__primary-occasion">occasion, </span><span
-                                class="heading__primary-taste">taste
-                            </span><span class="heading__primary-makes">makes </span>it one to
-                            <span class="heading__primary-remember">remember!</span>
-                        </h1>
-
-                    </div>
-                    <div class="carousel-item">
-                        <h1 class="heading__primary">Whatever your
-                            <span class="heading__primary-occasion">occasion, </span><span
-                                class="heading__primary-taste">taste
-                            </span><span class="heading__primary-makes">makes </span>it one to
-                            <span class="heading__primary-remember">remember!</span>
-                        </h1>
-
-                    </div>
-                    <div class="carousel-item">
-                        <h1 class="heading__primary">Whatever your
-                            <span class="heading__primary-occasion">occasion, </span><span
-                                class="heading__primary-taste">taste
-                            </span><span class="heading__primary-makes">makes </span>it one to
-                            <span class="heading__primary-remember">remember!</span>
-                        </h1>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="hero__btn-box">
-                <button><a class=" hero__btn-link hero__btn-link-purchase" href="#">purchase theme</a></button>
-                <button><a class=" hero__btn-link hero__btn-link-more" href="#">learn more</a></button>
-            </div>
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <!-- chaque effet de mot est marqué par une classe correspondante, le styling de cette pertie ce trouve dans le header -->
-
-
-
+      <nav class="header__nav">
+        <!-- les 4 premiers liens de la nav -->
+        <div class="header__nav-box">
+          <a href="#" class="header__nav-box-link">home</a>
+          <a href="#" class="header__nav-box-link">about us</a>
+          <a href="#" class="header__nav-box-link">menu list</a>
+          <a href="#" class="header__nav-box-link">team</a>
         </div>
+
+        <a class="header__nav-logo-link" href=""
+          ><img class="header__nav-logo" src="./public/img/logo.png" alt=""
+        /></a>
+        <!-- les 4 derniers liens de la nav -->
+        <div class="header__nav-box">
+          <a href="#" class="header__nav-box-link">reservation</a>
+          <a href="#" class="header__nav-box-link">blog</a>
+          <a href="#" class="header__nav-box-link">testimonials</a>
+          <a href="#" class="header__nav-box-link">contact us</a>
+        </div>
+      </nav>
+
+      <!-- Le hero contient le H1, les boutons cta, ainsi que les boutons du carousels -->
+      <div class="hero">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <h1 class="heading__primary">
+                <span>
+                  Whatever your
+                  <b class="heading__primary-occasion">occasion, </b>
+                </span>
+                <span>
+                  <b class="heading__primary-taste">taste </b
+                  ><b class="heading__primary-makes">makes </b>it
+                </span>
+                <span>
+                  one to
+                  <b class="heading__primary-remember">remember!</b>
+                </span>
+              </h1>
+            </div>
+            <div class="carousel-item">
+              <h1 class="heading__primary">
+                <span>
+                  Whatever your
+                  <b class="heading__primary-occasion">occasion, </b>
+                </span>
+                <span>
+                  <b class="heading__primary-taste">taste </b
+                  ><b class="heading__primary-makes">makes </b>it
+                </span>
+                <span>
+                  one to
+                  <b class="heading__primary-remember">remember!</b>
+                </span>
+              </h1>
+            </div>
+            <div class="carousel-item">
+              <h1 class="heading__primary">
+                <span>
+                  Whatever your
+                  <b class="heading__primary-occasion">occasion, </b>
+                </span>
+                <span>
+                  <b class="heading__primary-taste">taste </b
+                  ><b class="heading__primary-makes">makes </b>it
+                </span>
+                <span>
+                  one to
+                  <b class="heading__primary-remember">remember!</b>
+                </span>
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div class="hero__btn-box">
+          <button>
+            <a class="hero__btn-link hero__btn-link-purchase" href="#"
+              >purchase theme</a
+            >
+          </button>
+          <button>
+            <a class="hero__btn-link hero__btn-link-more" href="#"
+              >learn more</a
+            >
+          </button>
+        </div>
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <!-- chaque effet de mot est marqué par une classe correspondante, le styling de cette pertie ce trouve dans le header -->
+      </div>
     </header>
     <main>
-        <section class="info">
-            <div class="info__container">
-                <article class="info__about">
+      <section class="big__box">
+        <div class="big__box-container">
+          <img
+            class="img-corner-box br"
+            src="./public/img/box-bottom_right.png"
+            alt=""
+          />
+          <img
+            class="img-corner-box bl"
+            src="./public/img/box-bottom-left.png"
+            alt=""
+          />
+          <img
+            class="img-corner-box tl"
+            src="./public/img/box-left-top.png"
+            alt=""
+          />
+          <img
+            class="img-corner-box tr"
+            src="./public/img/box-right-top.png"
+            alt=""
+          />
+          <article class="info__about">
+            <h2 class="heading__secondary">
+              <span class="heading__secondary-red">our </span>Story
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Reiciendis ut cum exercitationem ullam, quo laudantium earum nemo
+              sit similique quam soluta ducimus consectetur ad voluptate rerum
+              at quas nesciunt itaque accusantium tenetur fugiat architecto!
+              Praesentium possimus aperiam hic consequatur aspernatur soluta
+              consequuntur enim doloremque placeat veniam obcaecati dicta odio
+              odit iste iure laboriosam nobis unde, velit molestias illum
+              dolorum veritatis natus, ullam earum. Nulla delectus, asperiores
+              commodi esse veniam facilis tenetur beatae quis nihil ipsum
+              eligendi temporibus laudantium iste cum est praesentium.
+              Excepturi, ut temporibus.
+            </p>
+            <h2 class="heading__secondary">
+              <span class="heading__secondary-red">our </span>Menu List
+            </h2>
+          </article>
+          <article class="info__menu"></article>
+        </div>
+      </section>
+      <section class="chef">
+        <h2 class="heading__secondary">
+          <span class="heading__secondary-red">meet </span>Our Chef
+        </h2>
 
-
-                    <h2 class="heading__secondary"><span class="heading__secondary-red">our </span>Story</h2>
-
-
-                </article>
-                <article class="info__menu">
-
-                </article>
-
-
-            </div>
-
-        </section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-
+        <article class="chef__box">
+          <div class="chef-person">
+            <img src="./public/img/chef1.png" alt="" />
+            <p>Lorem Ipsum</p>
+          </div>
+          <div class="chef-person">
+            <img src="./public/img/chef2.png" alt="" />
+            <p>Lorem Ipsum</p>
+          </div>
+          <div class="chef-person">
+            <img src="./public/img/chef3.png" alt="" />
+            <p>Lorem Ipsum</p>
+          </div>
+          <div class="chef-person">
+            <img src="./public/img/chef4.png" alt="" />
+            <p>Lorem Ipsum</p>
+          </div>
+        </article>
+      </section>
+      <section class="big__box">
+        <div class="big__box-container">
+          <img
+            class="img-corner-box br"
+            src="./public/img/box-bottom_right-grey.png"
+            alt=""
+          />
+          <img
+            class="img-corner-box bl"
+            src="./public/img/box-bottom-left-grey.png"
+            alt=""
+          />
+          <img
+            class="img-corner-box tl"
+            src="./public/img/box-left-top-grey.png"
+            alt=""
+          />
+          <img
+            class="img-corner-box tr"
+            src="./public/img/box-right-top-grey.png"
+            alt=""
+          />
+          <article>
+            <h2 class="heading__secondary">
+              <span class="heading__secondary-red">book </span>Your Table
+            </h2>
+          </article>
+        </div>
+      </section>
+      <section></section>
+      <section></section>
+      <section></section>
     </main>
-
-</body>
-
+  </body>
 </html>

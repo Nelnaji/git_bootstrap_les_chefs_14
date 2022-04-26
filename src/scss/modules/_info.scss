@@ -1,20 +1,14 @@
-.info {
-    height: 100vh;
-    background-image:
-        url(../img/main_bg.jpg);
-
-    .info__container {
-        width: 90%;
-        margin-inline: auto;
-        position: relative;
-        display: flex;
-        background-color: $white;
-
-        .info__about {
-            display: flex;
-            align-items: center;
-        }
-    }
-
-
+// centrage du text
+.info__about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+  p {
+    font-size: 1.6rem;
+    width: 40%;
+    padding: 6.4rem;
+  }
 }

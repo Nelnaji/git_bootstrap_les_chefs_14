@@ -1,38 +1,40 @@
 // les resets de la page ont utilise box-sizing inherit dans les petits cas ou nous aurions a mettre un element en content-box
 
 @use "./fonts";
-@use "./variables"as *;
+@use "./variables" as *;
 
 *,
 *:after,
 *:before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-    box-sizing: border-box;
-    font-size: 62.5%;
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
-
-
 
 // Styling of the secondary headings
 
 .heading__secondary {
-    text-align: center;
-    font-size: 3rem;
-    font-family: "Courgette";
+  font-size: 3.4rem;
+  font-family: "Courgette";
 
-    .heading__secondary-red {
-        text-transform: uppercase;
-        color: $red;
-        font-size: 5rem;
-    }
+  //   this add the border bottom with the image
+  border-bottom: 1.5rem solid transparent;
+  border-image-source: url(../img/decoration_line.png);
+  border-image-slice: 100 fill;
+  border-image-outset: 0 2rem;
+  margin: 2rem 0;
+  .heading__secondary-red {
+    text-transform: uppercase;
+    color: $red;
+    font-size: 5rem;
+  }
 }
