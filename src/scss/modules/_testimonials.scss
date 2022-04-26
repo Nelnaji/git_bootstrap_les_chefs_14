@@ -1,0 +1,46 @@
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../img/testimonials_background.jpg);
+  background-size: cover;
+  color: $white;
+  gap: 5rem;
+  padding: 5rem 0;
+}
+
+.testimonials-box {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 1;
+  justify-content: center;
+  gap: 3rem;
+}
+.img-testimonials {
+  border: 0.5rem solid $b-img;
+  border-radius: 50%;
+  width: 10%;
+}
+
+.testimonials-el {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $b-img;
+  border-radius: 1rem;
+  padding: 1rem 0.5rem;
+  width: 20%;
+}
+
+h4 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+h5 {
+  font-size: 1.8rem;
+  color: $red-hover;
+  padding-bottom: 1rem;
+}
+p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+}

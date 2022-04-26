@@ -15452,12 +15452,15 @@ readers do not read off random characters that represent icons */
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5rem;
+  gap: 8rem;
   margin: 5rem;
 }
 .blog .card-box {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
+}
+.blog .btn-perso {
+  margin-top: 7rem;
 }
 
 .img-card {
@@ -15467,19 +15470,23 @@ readers do not read off random characters that represent icons */
   border: 0.7rem solid hsl(0deg, 2%, 88%);
   border-radius: 1.4rem;
 }
-.img-card p {
-  bottom: -1.4rem;
+.img-card .text-card {
+  position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  position: absolute;
+  bottom: -35%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+}
+.img-card .text-card h4 {
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(353deg, 77%, 49%);
   padding: 1.4rem 1rem;
   border-radius: 1rem;
-  font-size: 1.6rem;
-  width: 70%;
 }
-.img-card p b {
+.img-card .text-card h4 b {
   font-size: 2.4rem;
   font-weight: 700;
 }
@@ -15489,9 +15496,58 @@ readers do not read off random characters that represent icons */
   flex-direction: column;
   text-align: start;
 }
-.card .text-card {
+.card h3 {
+  margin: 1rem 0;
+}
+
+.testimonials {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  background-image: url(../img/testimonials_background.jpg);
+  background-size: cover;
+  color: hsl(0deg, 0%, 100%);
+  gap: 5rem;
+  padding: 5rem 0;
+}
+
+.testimonials-box {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 1;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.img-testimonials {
+  border: 0.5rem solid hsl(0deg, 2%, 88%);
+  border-radius: 50%;
+  width: 10%;
+}
+
+.testimonials-el {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid hsl(0deg, 2%, 88%);
+  border-radius: 1rem;
+  padding: 1rem 0.5rem;
+  width: 20%;
+}
+
+h4 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+  color: hsl(353deg, 77%, 39%);
+  padding-bottom: 1rem;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 2rem;
 }
 
 /*# sourceMappingURL=app.css.map */
