@@ -1,0 +1,58 @@
+.socials {
+  background-image: url(../img/footer_background.jpg);
+  background-size: cover;
+  border-top: 1.5rem solid transparent;
+  border-image: url(../img/footer_bottom_decoration_img.png) repeat;
+  border-image-slice: 30;
+  display: flex;
+  color: $white;
+  padding: 5rem;
+  gap: 5rem;
+  h3 {
+    font-size: 2.6rem;
+    padding-bottom: 3rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    img {
+      width: 100%;
+    }
+  }
+  .socials-box {
+    width: 33%;
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  p {
+    padding: 0.8rem 2rem;
+    background-color: $red;
+    border-radius: 10rem;
+    border: 0.1em solid $b-img;
+  }
+}
+
+.text {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  width: 90%;
+}
+
+.icons {
+  display: flex;
+  gap: 3rem;
+  padding: 2rem 0;
+  i {
+    font-size: 3rem;
+  }
+}
+
+.footer {
+  background-color: $red;
+  height: 10vh;
+}

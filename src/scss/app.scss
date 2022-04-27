@@ -1,9 +1,9 @@
 // c'est ce gros fichier que nous compilons en app.css
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./icons";
 @import "./fonts";
 @import "./general";
 @import "./variables";
-
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "./modules/header";
 @import "./modules/info";
 @import "./modules/chef";
@@ -13,4 +13,3 @@
 @import "./modules/testimonials";
 @import "./modules/contact";
 @import "./modules/footer";
-@import "./icons";
