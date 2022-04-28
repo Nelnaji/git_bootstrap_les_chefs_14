@@ -7,6 +7,7 @@
   color: $white;
   gap: 5rem;
   padding: 5rem 0;
+
   @include responsive(tablet) {
     padding: 2rem 0;
   }
@@ -16,25 +17,32 @@
   display: flex;
   justify-content: center;
   gap: 3rem;
+
   @include responsive(bpl) {
     flex-direction: column;
   }
 }
+
 .big-test {
   display: flex;
   justify-content: space-evenly;
   gap: 2rem;
   padding: 2rem;
+
   @include responsive(tablet) {
     gap: 0.5rem;
     padding: 0.5rem;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 }
+
 .img-testimonials {
   border: 0.5rem solid $b-img;
   border-radius: 50%;
   width: 40%;
+
   @include responsive(bpl) {
     width: 20%;
   }
@@ -46,6 +54,7 @@
   border: 1px solid $b-img;
   border-radius: 1rem;
   padding: 1rem 0.5rem;
+
   @include responsive(tablet-p) {
     width: 60%;
   }
@@ -55,11 +64,13 @@ h4 {
   font-size: 2rem;
   padding-bottom: 1rem;
 }
+
 h5 {
   font-size: 1.8rem;
   color: $red-hover;
   padding-bottom: 1rem;
 }
+
 p {
   font-size: 1.6rem;
   line-height: 2rem;
