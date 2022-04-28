@@ -3,18 +3,24 @@
   flex-direction: column;
   align-items: center;
   gap: 8rem;
-  margin: 5rem;
-  @include responsive(tablet-p) {
-    margin: auto;
-  }
+
+
+
   .card-box {
     display: flex;
     gap: 3rem;
+
     @include responsive(bpl) {
       flex-direction: column;
       gap: 20rem;
     }
+
+    @include responsive(tablet) {
+      width: 90vw;
+      margin-inline: auto;
+    }
   }
+
   .btn-perso {
     margin-top: 7rem;
   }
@@ -23,9 +29,12 @@
 .img-card {
   position: relative;
 
+
   img {
     border: 0.7rem solid $b-img;
     border-radius: 1.4rem;
+    width: 100%;
+
   }
 
   .text-card {
@@ -37,12 +46,17 @@
     display: flex;
     flex-direction: column;
     font-size: 1.4rem;
+
     h4 {
       color: $white;
       background-color: $red;
       padding: 1.4rem 1rem;
       border-radius: 1rem;
       font-size: 1.6rem;
+
+      @include responsive(tablet) {
+        font-size: 1.3rem;
+      }
 
       b {
         font-size: 2.4rem;
@@ -59,11 +73,5 @@
 
   h3 {
     margin: 1rem 0;
-  }
-}
-.img-card {
-  @include responsive(tablet) {
-    width: 80vw;
-    margin-inline: auto;
   }
 }

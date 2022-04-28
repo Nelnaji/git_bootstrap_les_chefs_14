@@ -20,6 +20,11 @@
     justify-content: space-evenly;
   }
 
+  @include responsive(phone) {
+    font-size: 2.4rem;
+  }
+
+
   a {
     text-decoration: none;
     color: $black;
@@ -76,6 +81,12 @@
     border-radius: 50%;
     border: 0.5rem solid $b-img;
     margin-bottom: 1rem;
+
+    @include responsive(phone) {
+      width: 50%;
+      margin-left: 1rem;
+    }
+
   }
 
   h5 {

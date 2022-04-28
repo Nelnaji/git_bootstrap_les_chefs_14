@@ -15719,10 +15719,20 @@ readers do not read off random characters that represent icons */
   flex-direction: column;
   align-items: center;
 }
+@media (max-width: 437px) {
+  .secondary__heading-box {
+    padding-top: 4rem;
+  }
+}
 
 .heading__secondary {
   font-size: 3.4rem;
   font-family: "Courgette";
+}
+@media (max-width: 1024px) {
+  .heading__secondary {
+    font-size: 2.4rem;
+  }
 }
 .heading__secondary .heading__secondary-red {
   text-transform: uppercase;
@@ -15763,71 +15773,6 @@ readers do not read off random characters that represent icons */
   margin-top: 10rem;
 }
 
-/* MOBILE NAVIGATION */
-@media (max-width: 1024px) {
-  .main-nav {
-    background-color: rgba(255, 255, 255, 0.946);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    transform: translateX(100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.5s ease-in;
-    /*Hide element visually*/
-    opacity: 0;
-    /*Make it unaccessible to mouse and keyboard*/
-    pointer-events: none;
-    /*3) Hide it from screen readers*/
-    visibility: hidden;
-  }
-
-  .nav-open .main-nav {
-    opacity: 1;
-    pointer-events: auto;
-    visibility: visible;
-    transform: translateX(0);
-  }
-
-  .btn-mobile-nav {
-    display: block;
-    z-index: 9999;
-  }
-
-  .icon-mobile-nav {
-    display: block;
-  }
-
-  .nav-open .btn-mobile-nav {
-    display: block;
-  }
-
-  .nav-open .icon-close-mobile-nav {
-    display: block;
-  }
-
-  .nav-open .icon-mobile-nav {
-    display: none;
-  }
-
-  .main-nav-list {
-    flex-direction: column;
-    gap: 4.8rem;
-  }
-
-  .main-nav-link:link,
-.main-nav-link:visited {
-    font-size: 3.2rem;
-  }
-
-  .main-nav-link:hover,
-.main-nav-link:active {
-    color: #cf711f;
-  }
-}
 .header__bg-img {
   height: 102vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/banner1.jpg);
@@ -16041,6 +15986,11 @@ readers do not read off random characters that represent icons */
     justify-content: space-evenly;
   }
 }
+@media (max-width: 437px) {
+  .menu-list {
+    font-size: 2.4rem;
+  }
+}
 .menu-list a {
   text-decoration: none;
   color: hsl(0deg, 0%, 0%);
@@ -16095,6 +16045,12 @@ readers do not read off random characters that represent icons */
   border-radius: 50%;
   border: 0.5rem solid hsl(0deg, 2%, 88%);
   margin-bottom: 1rem;
+}
+@media (max-width: 437px) {
+  .grid-el img {
+    width: 50%;
+    margin-left: 1rem;
+  }
 }
 .grid-el h5 {
   color: hsl(0deg, 0%, 0%);
@@ -16190,10 +16146,17 @@ readers do not read off random characters that represent icons */
 @media (max-width: 1024px) {
   .form-container {
     width: 100%;
+    justify-content: center;
+    text-align: center;
   }
 }
 .form-container p span {
   font-size: 3rem;
+}
+@media (max-width: 1024px) {
+  .form-container p span {
+    font-size: 2rem;
+  }
 }
 
 .form-grid {
@@ -16218,18 +16181,18 @@ readers do not read off random characters that represent icons */
   color: black;
   border: none;
 }
+@media (max-width: 1024px) {
+  .form-grid .sub-grid input,
+.form-grid .sub-grid select {
+    padding-right: 15rem;
+  }
+}
 
 .blog {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8rem;
-  margin: 5rem;
-}
-@media (max-width: 1024px) {
-  .blog {
-    margin: auto;
-  }
 }
 .blog .card-box {
   display: flex;
@@ -16239,6 +16202,12 @@ readers do not read off random characters that represent icons */
   .blog .card-box {
     flex-direction: column;
     gap: 20rem;
+  }
+}
+@media (max-width: 768px) {
+  .blog .card-box {
+    width: 90vw;
+    margin-inline: auto;
   }
 }
 .blog .btn-perso {
@@ -16251,6 +16220,7 @@ readers do not read off random characters that represent icons */
 .img-card img {
   border: 0.7rem solid hsl(0deg, 2%, 88%);
   border-radius: 1.4rem;
+  width: 100%;
 }
 .img-card .text-card {
   position: absolute;
@@ -16269,6 +16239,11 @@ readers do not read off random characters that represent icons */
   border-radius: 1rem;
   font-size: 1.6rem;
 }
+@media (max-width: 768px) {
+  .img-card .text-card h4 {
+    font-size: 1.3rem;
+  }
+}
 .img-card .text-card h4 b {
   font-size: 2.4rem;
   font-weight: 700;
@@ -16281,13 +16256,6 @@ readers do not read off random characters that represent icons */
 }
 .card h3 {
   margin: 1rem 0;
-}
-
-@media (max-width: 768px) {
-  .img-card {
-    width: 80vw;
-    margin-inline: auto;
-  }
 }
 
 .testimonials {

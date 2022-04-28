@@ -4,6 +4,7 @@
   align-items: center;
   gap: 3rem;
 }
+
 .form-container {
   color: $white;
   background-image: url(../img/book_table_bg.jpg);
@@ -17,15 +18,25 @@
   width: 65%;
   border-radius: 1.4rem;
   padding: 8rem 0;
+
   @include responsive(bpl) {
     width: 80%;
   }
+
   @include responsive(tablet-p) {
     width: 100%;
+    justify-content: center;
+    text-align: center;
   }
+
   p {
     span {
       font-size: 3rem;
+
+      @include responsive(tablet-p) {
+        font-size: 2rem;
+      }
+
     }
   }
 }
@@ -33,13 +44,16 @@
 .form-grid {
   display: flex;
   gap: 4rem;
+
   @include responsive(tablet) {
     flex-direction: column;
   }
+
   .sub-grid {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
     input,
     select {
       border-radius: 1.2rem;
@@ -47,6 +61,11 @@
       padding-right: 20rem;
       color: black;
       border: none;
+
+      @include responsive(tablet-p) {
+        padding-right: 15rem;
+      }
+
     }
   }
 }
