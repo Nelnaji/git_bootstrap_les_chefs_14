@@ -15255,7 +15255,7 @@ readers do not read off random characters that represent icons */
 }
 
 .big__box-container .stic {
-  margin-top: 12.6rem;
+  margin-top: 10rem;
 }
 
 .header__bg-img {
@@ -15385,6 +15385,69 @@ readers do not read off random characters that represent icons */
   font-size: 1.6rem;
   width: 40%;
   padding: 6.4rem;
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  gap: 1rem;
+  padding-bottom: 8rem;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  font-size: 3rem;
+  gap: 1rem;
+  border-right: 1px solid hsl(0deg, 2%, 88%);
+}
+.menu-list a {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 0%);
+  font-family: "Courgette";
+  padding-bottom: 1rem;
+}
+
+.flex-el {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-transform: capitalize;
+  border-bottom: 1px solid hsl(0deg, 2%, 88%);
+}
+.flex-el i {
+  font-size: 7rem;
+  color: hsl(0deg, 2%, 88%);
+  padding: 1rem 0;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-el {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid hsl(0deg, 2%, 88%);
+  padding: 1rem;
+  width: 90%;
+}
+.grid-el img {
+  border-radius: 50%;
+  border: 0.5rem solid hsl(0deg, 2%, 88%);
+}
+.grid-el h5 {
+  color: hsl(0deg, 0%, 0%);
+}
+.grid-el .price {
+  padding: 0.2rem 1.6rem;
+  background-color: hsl(0deg, 2%, 88%);
+  color: hsl(353deg, 77%, 49%);
+  font-weight: 600;
 }
 
 .chef {
