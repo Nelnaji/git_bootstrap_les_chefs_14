@@ -22,8 +22,19 @@
     <header class="header__bg-img">
       <!-- Navigation principale en flex-box le code de styling ce trouve dans le header.scss -->
 
-      <nav class="header__nav">
+      <nav class="header__nav navbar navbar-expand-lg collapse navbar-collapse">
         <!-- les 4 premiers liens de la nav -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="header__nav-box">
           <a href="#" class="header__nav-box-link">home</a>
           <a href="#about" class="header__nav-box-link">about us</a>
@@ -41,10 +52,6 @@
           <a href="#testimonials" class="header__nav-box-link">testimonials</a>
           <a href="#contact" class="header__nav-box-link">contact us</a>
         </div>
-        <button class="btn-mobile-nav">
-          <a href=""><i class="fa-solid fa-xmark icon-mobile-nav close"></i></a>
-          <a href=""> <i class="fa-solid fa-bars icon-mobile-nav open"></i></a>
-        </button>
       </nav>
 
       <!-- Le hero contient le H1, les boutons cta, ainsi que les boutons du carousels -->

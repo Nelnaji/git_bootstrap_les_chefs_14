@@ -1,13 +1,6 @@
 ///////////////////////////////////////////////////////////
 // Make mobile navigation work
 
-const btnNavEl = document.querySelector(".btn-mobile-nav");
-const headerEl = document.querySelector(".header__nav");
-
-btnNavEl.addEventListener("click", function () {
-  headerEl.classList.toggle("nav-open");
-});
-
 // Ceci vas ajouter du smoorth scrolling
 
 const allLinks = document.querySelectorAll("a:link");
