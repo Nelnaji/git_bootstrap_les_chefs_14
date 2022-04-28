@@ -80,8 +80,14 @@
 
   @include responsive(bpl) {
 
+    padding-top: 10%;
+  }
+
+  @include responsive(tablet) {
+
     padding-top: 20%;
   }
+
 
 
   h1 {
@@ -173,10 +179,13 @@
 .responsive-icon {
   display: none;
   font-size: 5rem;
-  position: absolute;
+  position: fixed;
   margin-right: 2rem;
   top: 2rem;
   color: $white;
+  z-index: 9999;
+  padding: .6rem;
+  color: $red;
 
   @include responsive(bpl) {
 

@@ -19,6 +19,9 @@
       width: 90vw;
       margin-inline: auto;
     }
+
+
+
   }
 
   .btn-perso {
@@ -47,6 +50,12 @@
     flex-direction: column;
     font-size: 1.4rem;
 
+    @include responsive(s) {
+      bottom: -60%;
+      width: 90%;
+    }
+
+
     h4 {
       color: $white;
       background-color: $red;
@@ -74,4 +83,11 @@
   h3 {
     margin: 1rem 0;
   }
+}
+
+.btn-blogging {
+  @include responsive(s) {
+    margin-bottom: 10rem;
+  }
+
 }

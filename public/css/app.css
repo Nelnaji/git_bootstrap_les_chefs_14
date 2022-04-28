@@ -15838,6 +15838,11 @@ readers do not read off random characters that represent icons */
 }
 @media (max-width: 1320px) {
   .hero {
+    padding-top: 10%;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
     padding-top: 20%;
   }
 }
@@ -15914,10 +15919,13 @@ readers do not read off random characters that represent icons */
 .responsive-icon {
   display: none;
   font-size: 5rem;
-  position: absolute;
+  position: fixed;
   margin-right: 2rem;
   top: 2rem;
   color: hsl(0deg, 0%, 100%);
+  z-index: 9999;
+  padding: 0.6rem;
+  color: hsl(353deg, 77%, 49%);
 }
 @media (max-width: 1320px) {
   .responsive-icon {
@@ -16232,6 +16240,12 @@ readers do not read off random characters that represent icons */
   flex-direction: column;
   font-size: 1.4rem;
 }
+@media (max-width: 320px) {
+  .img-card .text-card {
+    bottom: -60%;
+    width: 90%;
+  }
+}
 .img-card .text-card h4 {
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(353deg, 77%, 49%);
@@ -16256,6 +16270,12 @@ readers do not read off random characters that represent icons */
 }
 .card h3 {
   margin: 1rem 0;
+}
+
+@media (max-width: 320px) {
+  .btn-blogging {
+    margin-bottom: 10rem;
+  }
 }
 
 .testimonials {
@@ -16309,6 +16329,12 @@ readers do not read off random characters that represent icons */
 @media (max-width: 1320px) {
   .img-testimonials {
     width: 20%;
+  }
+}
+@media (max-width: 768px) {
+  .img-testimonials {
+    order: 1;
+    margin-top: 1rem;
   }
 }
 

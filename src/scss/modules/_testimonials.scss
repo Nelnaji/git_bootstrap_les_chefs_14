@@ -46,6 +46,11 @@
   @include responsive(bpl) {
     width: 20%;
   }
+
+  @include responsive(tablet) {
+    order: 1;
+    margin-top: 1rem;
+  }
 }
 
 .testimonials-el {
