@@ -21,12 +21,24 @@
   padding-top: 2rem;
   gap: 4rem;
 
+
+
+
+
+
+
+
   .header__nav-box {
     display: flex;
 
     font-size: 1.6rem;
     border-top: 1px solid $white;
     border-bottom: 1px solid $white;
+
+    @include responsive(bpl) {
+      font-size: 1.4rem;
+    }
+
 
     a:link,
     a:visited {
@@ -37,6 +49,11 @@
       padding: 1.6rem 3.4rem;
       transition: all 0.3s;
       background-color: none;
+
+      @include responsive(tablet-p) {
+        padding: 1.3rem 2.8rem;
+      }
+
 
       &:hover {
         background-color: $red-hover;
@@ -61,13 +78,21 @@
   text-align: center;
   justify-content: center;
 
+  @include responsive(bpl) {
+
+    padding-top: 20%;
+  }
+
+
   h1 {
     font-family: "Courgette", Brush Script MT;
     font-size: 3rem;
     margin-inline: auto;
+
     span {
       display: block;
     }
+
     .heading__primary-occasion {
       font-size: 6rem;
       text-transform: uppercase;
@@ -136,4 +161,26 @@
   height: 1rem;
   /* change height */
   border-radius: 50%; // /* add border-radius */
+}
+
+
+.header__nav {
+  @include responsive(bpl) {
+    display: none;
+  }
+}
+
+.responsive-icon {
+  display: none;
+  font-size: 5rem;
+  position: absolute;
+  margin-right: 2rem;
+  top: 2rem;
+  color: $white;
+
+  @include responsive(bpl) {
+
+    display: block;
+    right: 0;
+  }
 }

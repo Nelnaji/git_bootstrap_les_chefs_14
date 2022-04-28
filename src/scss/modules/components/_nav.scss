@@ -15,6 +15,77 @@
 .big__box-container .stic {
   margin-top: 10rem;
 }
+
 // ont ajout rem = 100px de margin top a la section hero car quand la barre de navigation passe en sticky elle est sortie du flow de la page.
 
 /* MOBILE NAVIGATION */
+
+@include responsive(tablet-p) {
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.946);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.5s ease-in;
+
+    /*Hide element visually*/
+    opacity: 0;
+    /*Make it unaccessible to mouse and keyboard*/
+
+    pointer-events: none;
+
+    /*3) Hide it from screen readers*/
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .icon-mobile-nav {
+    display: block;
+  }
+
+  .nav-open .btn-mobile-nav {
+    display: block;
+  }
+
+  .nav-open .icon-close-mobile-nav {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3.2rem;
+  }
+
+  .main-nav-link:hover,
+  .main-nav-link:active {
+    color: #cf711f;
+  }
+
+}

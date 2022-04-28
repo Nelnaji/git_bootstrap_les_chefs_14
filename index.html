@@ -1,651 +1,538 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- lien vers le css -->
 
-    <title>Les chefs</title>
-    <script
-      src="./node_modules/@popperjs/core/dist/umd/popper.js"
-      defer
-    ></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.js" defer></script>
-    <script src="./public/js/app.js" defer></script>
-    <link rel="stylesheet" href="./public/css/app.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- lien vers le css -->
 
-  <body>
-    <!-- j'utilise au plus possible la convention BEM pour nommer mes .classes et #ID's -->
-    <!-- le .header contient l'image en background la nav le h1, en gros toute la section Hero -->
-    <header class="header__bg-img">
-      <!-- Navigation principale en flex-box le code de styling ce trouve dans le header.scss -->
+  <title>Les chefs</title>
+  <script src="./node_modules/@popperjs/core/dist/umd/popper.js" defer></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.js" defer></script>
+  <script src="./public/js/app.js" defer></script>
+  <link rel="stylesheet" href="./public/css/app.css" />
+</head>
 
-      <nav class="header__nav navbar navbar-expand-lg collapse navbar-collapse">
-        <!-- les 4 premiers liens de la nav -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="header__nav-box">
-          <a href="#" class="header__nav-box-link">home</a>
-          <a href="#about" class="header__nav-box-link">about us</a>
-          <a href="#menu" class="header__nav-box-link">menu list</a>
-          <a href="#team" class="header__nav-box-link">team</a>
-        </div>
+<body>
+  <!-- j'utilise au plus possible la convention BEM pour nommer mes .classes et #ID's -->
+  <!-- le .header contient l'image en background la nav le h1, en gros toute la section Hero -->
+  <header class="header__bg-img">
+    <!-- Navigation principale en flex-box le code de styling ce trouve dans le header.scss -->
 
-        <a class="header__nav-logo-link" href="#"
-          ><img class="header__nav-logo" src="./public/img/logo.png" alt=""
-        /></a>
-        <!-- les 4 derniers liens de la nav -->
-        <div class="header__nav-box">
-          <a href="#book" class="header__nav-box-link">reservation</a>
-          <a href="#blog" class="header__nav-box-link">blog</a>
-          <a href="#testimonials" class="header__nav-box-link">testimonials</a>
-          <a href="#contact" class="header__nav-box-link">contact us</a>
-        </div>
-      </nav>
+    <nav class="header__nav">
+      <!-- les 4 premiers liens de la nav -->
 
-      <!-- Le hero contient le H1, les boutons cta, ainsi que les boutons du carousels -->
-      <div class="hero">
-        <div
-          id="carouselExampleIndicators"
-          class="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <h1 class="heading__primary">
-                <span>
-                  Whatever your
-                  <b class="heading__primary-occasion">occasion, </b>
-                </span>
-                <span>
-                  <b class="heading__primary-taste">taste </b
-                  ><b class="heading__primary-makes">makes </b>it
-                </span>
-                <span>
-                  one to
-                  <b class="heading__primary-remember">remember!</b>
-                </span>
-              </h1>
-            </div>
-            <div class="carousel-item">
-              <h1 class="heading__primary">
-                <span>
-                  Whatever your
-                  <b class="heading__primary-occasion">occasion, </b>
-                </span>
-                <span>
-                  <b class="heading__primary-taste">taste </b
-                  ><b class="heading__primary-makes">makes </b>it
-                </span>
-                <span>
-                  one to
-                  <b class="heading__primary-remember">remember!</b>
-                </span>
-              </h1>
-            </div>
-            <div class="carousel-item">
-              <h1 class="heading__primary">
-                <span>
-                  Whatever your
-                  <b class="heading__primary-occasion">occasion, </b>
-                </span>
-                <span>
-                  <b class="heading__primary-taste">taste </b
-                  ><b class="heading__primary-makes">makes </b>it
-                </span>
-                <span>
-                  one to
-                  <b class="heading__primary-remember">remember!</b>
-                </span>
-              </h1>
-            </div>
-          </div>
-        </div>
-        <div class="hero__btn-box">
-          <button>
-            <a class="hero__btn-link hero__btn-link-purchase" href="#"
-              >purchase theme</a
-            >
-          </button>
-
-          <a class="btn-perso" href="#">learn more</a>
-        </div>
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-        <!-- chaque effet de mot est marqué par une classe correspondante, le styling de cette pertie ce trouve dans le header -->
+      <div class="header__nav-box">
+        <a href="#" class="header__nav-box-link">home</a>
+        <a href="#about" class="header__nav-box-link">about us</a>
+        <a href="#menu" class="header__nav-box-link">menu list</a>
+        <a href="#team" class="header__nav-box-link">team</a>
       </div>
-    </header>
-    <main>
-      <!-- this section contains the about and the menu -->
-      <section id="about" class="big__box about-menu">
-        <div class="big__box-container">
-          <img
-            class="img-corner-box br"
-            src="./public/img/box-bottom_right.png"
-            alt=""
-          />
-          <img
-            class="img-corner-box bl"
-            src="./public/img/box-bottom-left.png"
-            alt=""
-          />
-          <img
-            class="img-corner-box tl"
-            src="./public/img/box-left-top.png"
-            alt=""
-          />
-          <img
-            class="img-corner-box tr"
-            src="./public/img/box-right-top.png"
-            alt=""
-          />
-          <article class="info__about">
-            <div class="secondary__heading-box">
-              <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
-              <h2 class="heading__secondary">
-                <span class="heading__secondary-red">our </span>Story
-              </h2>
-              <img src="./public/img/decoration_line.png" alt="" />
+
+      <a class="header__nav-logo-link" href="#"><img class="header__nav-logo" src="./public/img/logo.png" alt="" /></a>
+      <!-- les 4 derniers liens de la nav -->
+      <div class="header__nav-box">
+        <a href="#book" class="header__nav-box-link">reservation</a>
+        <a href="#blog" class="header__nav-box-link">blog</a>
+        <a href="#testimonials" class="header__nav-box-link">testimonials</a>
+        <a href="#contact" class="header__nav-box-link">contact us</a>
+      </div>
+
+    </nav>
+    <a href=""><i class="fa-solid fa-bars responsive-icon"></i></a>
+
+    <!-- Le hero contient le H1, les boutons cta, ainsi que les boutons du carousels -->
+    <div class="hero">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h1 class="heading__primary">
+              <span>
+                Whatever your
+                <b class="heading__primary-occasion">occasion, </b>
+              </span>
+              <span>
+                <b class="heading__primary-taste">taste </b><b class="heading__primary-makes">makes </b>it
+              </span>
+              <span>
+                one to
+                <b class="heading__primary-remember">remember!</b>
+              </span>
+            </h1>
+          </div>
+          <div class="carousel-item">
+            <h1 class="heading__primary">
+              <span>
+                Whatever your
+                <b class="heading__primary-occasion">occasion, </b>
+              </span>
+              <span>
+                <b class="heading__primary-taste">taste </b><b class="heading__primary-makes">makes </b>it
+              </span>
+              <span>
+                one to
+                <b class="heading__primary-remember">remember!</b>
+              </span>
+            </h1>
+          </div>
+          <div class="carousel-item">
+            <h1 class="heading__primary">
+              <span>
+                Whatever your
+                <b class="heading__primary-occasion">occasion, </b>
+              </span>
+              <span>
+                <b class="heading__primary-taste">taste </b><b class="heading__primary-makes">makes </b>it
+              </span>
+              <span>
+                one to
+                <b class="heading__primary-remember">remember!</b>
+              </span>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="hero__btn-box">
+        <button>
+          <a class="hero__btn-link hero__btn-link-purchase" href="#">purchase theme</a>
+        </button>
+
+        <a class="btn-perso" href="#">learn more</a>
+      </div>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <!-- chaque effet de mot est marqué par une classe correspondante, le styling de cette pertie ce trouve dans le header -->
+    </div>
+  </header>
+  <main>
+    <!-- this section contains the about and the menu -->
+    <section id="about" class="big__box about-menu">
+      <div class="big__box-container">
+        <img class="img-corner-box br" src="./public/img/box-bottom_right.png" alt="" />
+        <img class="img-corner-box bl" src="./public/img/box-bottom-left.png" alt="" />
+        <img class="img-corner-box tl" src="./public/img/box-left-top.png" alt="" />
+        <img class="img-corner-box tr" src="./public/img/box-right-top.png" alt="" />
+        <article class="info__about">
+          <div class="secondary__heading-box">
+            <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+            <h2 class="heading__secondary">
+              <span class="heading__secondary-red">our </span>Story
+            </h2>
+            <img src="./public/img/decoration_line.png" alt="" />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Reiciendis ut cum exercitationem ullam, quo laudantium earum nemo
+            sit similique quam soluta ducimus consectetur ad voluptate rerum
+            at quas nesciunt itaque accusantium tenetur fugiat architecto!
+            Praesentium possimus aperiam hic consequatur aspernatur soluta
+            consequuntur enim doloremque placeat veniam obcaecati dicta odio
+            odit iste iure laboriosam nobis unde, velit molestias illum
+            dolorum veritatis natus, ullam earum. Nulla delectus, asperiores
+            commodi esse veniam facilis tenetur beatae quis nihil ipsum
+            eligendi temporibus laudantium iste cum est praesentium.
+            Excepturi, ut temporibus.
+          </p>
+        </article>
+        <article class="info__menu">
+          <div id="menu" class="secondary__heading-box">
+            <h2 class="heading__secondary">
+              <span class="heading__secondary-red">our </span>Menu List
+            </h2>
+            <img src="./public/img/decoration_line.png" alt="" />
+          </div>
+          <div class="menu-container">
+            <div class="menu-list">
+              <div class="flex-el">
+                <a class="breakfast" href="">
+                  <i class="fa-solid fa-mug-hot"></i>
+                  breakfast</a>
+              </div>
+              <div class="flex-el">
+                <a class="lunch" href="">
+                  <i class="fa-solid fa-bell-concierge"></i>
+                  lunch</a>
+              </div>
+              <div class="flex-el">
+                <a class="snacks" href="">
+                  <i class="fa-solid fa-cheese"></i>
+                  snacks</a>
+              </div>
+              <div class="flex-el">
+                <a class="dinner" href="">
+                  <i class="fa-solid fa-pizza-slice"></i>
+                  dinner</a>
+              </div>
             </div>
+            <div class="menu-grid">
+              <div class="grid-el">
+                <img class="img-grid-menu" src="./public/img/menu_image_1.jpg" alt="" />
+                <div class="text-container">
+                  <h5>Deer Steak with Potatoes</h5>
+                  <p class="text">
+                    Welcome to Risotto restaurant website. here we try to
+                    share
+                  </p>
+                </div>
+                <p class="price">$25</p>
+              </div>
+              <div class="grid-el">
+                <img class="img-grid-menu" src="./public/img/menu_image_1.jpg" alt="" />
+                <div class="text-container">
+                  <h5>Deer Steak with Potatoes</h5>
+                  <p class="text">
+                    Welcome to Risotto restaurant website. here we try to
+                    share
+                  </p>
+                </div>
+                <p class="price">$25</p>
+              </div>
+              <div class="grid-el">
+                <img class="img-grid-menu" src="./public/img/menu_image_1.jpg" alt="" />
+                <div class="text-container">
+                  <h5>Deer Steak with Potatoes</h5>
+                  <p class="text">
+                    Welcome to Risotto restaurant website. here we try to
+                    share
+                  </p>
+                </div>
+                <p class="price">$25</p>
+              </div>
+              <div class="grid-el">
+                <img class="img-grid-menu" src="./public/img/menu_image_1.jpg" alt="" />
+                <div class="text-container">
+                  <h5>Deer Steak with Potatoes</h5>
+                  <p class="text">
+                    Welcome to Risotto restaurant website. here we try to
+                    share
+                  </p>
+                </div>
+                <p class="price">$25</p>
+              </div>
+              <div class="grid-el">
+                <img class="img-grid-menu" src="./public/img/menu_image_1.jpg" alt="" />
+                <div class="text-container">
+                  <h5>Deer Steak with Potatoes</h5>
+                  <p class="text">
+                    Welcome to Risotto restaurant website. here we try to
+                    share
+                  </p>
+                </div>
+                <p class="price">$25</p>
+              </div>
+              <div class="grid-el">
+                <img class="img-grid-menu" src="./public/img/menu_image_1.jpg" alt="" />
+                <div class="text-container">
+                  <h5>Deer Steak with Potatoes</h5>
+                  <p class="text">
+                    Welcome to Risotto restaurant website. here we try to
+                    share
+                  </p>
+                </div>
+                <p class="price">$25</p>
+              </div>
+              <div class="grid-el">
+                <img class="img-grid-menu" src="./public/img/menu_image_1.jpg" alt="" />
+                <div class="text-container">
+                  <h5>Deer Steak with Potatoes</h5>
+                  <p class="text">
+                    Welcome to Risotto restaurant website. here we try to
+                    share
+                  </p>
+                </div>
+                <p class="price">$25</p>
+              </div>
+              <div class="grid-el">
+                <img class="img-grid-menu" src="./public/img/menu_image_1.jpg" alt="" />
+                <div class="text-container">
+                  <h5>Deer Steak with Potatoes</h5>
+                  <p class="text">
+                    Welcome to Risotto restaurant website. here we try to
+                    share
+                  </p>
+                </div>
+                <p class="price">$25</p>
+              </div>
+              <div class="grid-el">
+                <img class="img-grid-menu" src="./public/img/menu_image_1.jpg" alt="" />
+                <div class="text-container">
+                  <h5>Deer Steak with Potatoes</h5>
+                  <p class="text">
+                    Welcome to Risotto restaurant website. here we try to
+                    share
+                  </p>
+                </div>
+                <p class="price">$25</p>
+              </div>
+              <div class="grid-el">
+                <img class="img-grid-menu" src="./public/img/menu_image_1.jpg" alt="" />
+                <div class="text-container">
+                  <h5>Deer Steak with Potatoes</h5>
+                  <p class="text">
+                    Welcome to Risotto restaurant website. here we try to
+                    share
+                  </p>
+                </div>
+                <p class="price">$25</p>
+              </div>
+            </div>
+          </div>
+          <div class="padd"><img class="pad" src="./public/img/decoration_line.png" alt="" /></div>
+
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- this section contains the team -->
+    <section id="team" class="chef">
+      <div class="secondary__heading-box">
+        <h2 class="heading__secondary">
+          <span class="heading__secondary-red">meet </span>our Chefs
+        </h2>
+        <img src="./public/img/decoration_line.png" alt="" />
+      </div>
+
+      <article class="chef__box">
+        <div class="chef-person">
+          <img src="./public/img/chef1.png" alt="" />
+          <p>Lorem Ipsum</p>
+        </div>
+        <div class="chef-person">
+          <img src="./public/img/chef2.png" alt="" />
+          <p>Lorem Ipsum</p>
+        </div>
+        <div class="chef-person">
+          <img src="./public/img/chef3.png" alt="" />
+          <p>Lorem Ipsum</p>
+        </div>
+        <div class="chef-person">
+          <img src="./public/img/chef4.png" alt="" />
+          <p>Lorem Ipsum</p>
+        </div>
+      </article>
+    </section>
+    <!-- this section contains the booking section and the blog section -->
+    <section class="big__box booking-blog">
+      <div class="big__box-container">
+        <img class="img-corner-box br" src="./public/img/box-bottom_right-grey.png" alt="" />
+        <img class="img-corner-box bl" src="./public/img/box-bottom-left-grey.png" alt="" />
+        <img class="img-corner-box tl" src="./public/img/box-left-top-grey.png" alt="" />
+        <img class="img-corner-box tr" src="./public/img/box-right-top-grey.png" alt="" />
+        <article id="book" class="booking">
+          <div class="secondary__heading-box">
+            <h2 class="heading__secondary">
+              <span class="heading__secondary-red">book </span>Your Table
+            </h2>
+            <img src="./public/img/decoration_line.png" alt="" />
+          </div>
+          <div class="form-container">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Reiciendis ut cum exercitationem ullam, quo laudantium earum nemo
-              sit similique quam soluta ducimus consectetur ad voluptate rerum
-              at quas nesciunt itaque accusantium tenetur fugiat architecto!
-              Praesentium possimus aperiam hic consequatur aspernatur soluta
-              consequuntur enim doloremque placeat veniam obcaecati dicta odio
-              odit iste iure laboriosam nobis unde, velit molestias illum
-              dolorum veritatis natus, ullam earum. Nulla delectus, asperiores
-              commodi esse veniam facilis tenetur beatae quis nihil ipsum
-              eligendi temporibus laudantium iste cum est praesentium.
-              Excepturi, ut temporibus.
+              For any query please call us at: <span>+91-1234567890</span>
             </p>
-          </article>
-          <article class="info__menu">
-            <div id="menu" class="secondary__heading-box">
-              <h2 class="heading__secondary">
-                <span class="heading__secondary-red">our </span>Menu List
-              </h2>
-              <img src="./public/img/decoration_line.png" alt="" />
-            </div>
-            <div class="menu-container">
-              <div class="menu-list">
-                <div class="flex-el">
-                  <a class="breakfast" href="">
-                    <i class="fa-solid fa-mug-hot"></i>
-                    breakfast</a
-                  >
+            <form action="">
+              <div class="form-grid">
+                <div class="sub-grid">
+                  <input type="text" placeholder="Enter Full Name" />
+                  <input type="tel" placeholder="Phone Number" />
+                  <input type="datetime" placeholder="Date" />
+                  <select>
+                    <option value="occasion">Ocassion</option>
+                    <option value="">Marriage</option>
+                    <option value="anniversaire">Anniversaire</option>
+                    <option value="entretien">Entretien</option>
+                  </select>
                 </div>
-                <div class="flex-el">
-                  <a class="lunch" href="">
-                    <i class="fa-solid fa-bell-concierge"></i>
-                    lunch</a
-                  >
-                </div>
-                <div class="flex-el">
-                  <a class="snacks" href="">
-                    <i class="fa-solid fa-cheese"></i>
-                    snacks</a
-                  >
-                </div>
-                <div class="flex-el">
-                  <a class="dinner" href="">
-                    <i class="fa-solid fa-pizza-slice"></i>
-                    dinner</a
-                  >
+                <div class="sub-grid">
+                  <input type="text" placeholder="Enter Id" />
+                  <select>
+                    <option value="occasion">No Of Person</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                  <input type="datetime" placeholder="Time" />
+                  <select>
+                    <option value="occasion">Cuisine</option>
+                    <option value="">orientale</option>
+                    <option value="anniversaire">asiatique</option>
+                    <option value="entretien">méditerranéenne</option>
+                  </select>
                 </div>
               </div>
-              <div class="menu-grid">
-                <div class="grid-el">
-                  <img
-                    class="img-grid-menu"
-                    src="./public/img/menu_image_1.jpg"
-                    alt=""
-                  />
-                  <div class="text-container">
-                    <h5>Deer Steak with Potatoes</h5>
-                    <p class="text">
-                      Welcome to Risotto restaurant website. here we try to
-                      share
-                    </p>
-                  </div>
-                  <p class="price">$25</p>
-                </div>
-                <div class="grid-el">
-                  <img
-                    class="img-grid-menu"
-                    src="./public/img/menu_image_1.jpg"
-                    alt=""
-                  />
-                  <div class="text-container">
-                    <h5>Deer Steak with Potatoes</h5>
-                    <p class="text">
-                      Welcome to Risotto restaurant website. here we try to
-                      share
-                    </p>
-                  </div>
-                  <p class="price">$25</p>
-                </div>
-                <div class="grid-el">
-                  <img
-                    class="img-grid-menu"
-                    src="./public/img/menu_image_1.jpg"
-                    alt=""
-                  />
-                  <div class="text-container">
-                    <h5>Deer Steak with Potatoes</h5>
-                    <p class="text">
-                      Welcome to Risotto restaurant website. here we try to
-                      share
-                    </p>
-                  </div>
-                  <p class="price">$25</p>
-                </div>
-                <div class="grid-el">
-                  <img
-                    class="img-grid-menu"
-                    src="./public/img/menu_image_1.jpg"
-                    alt=""
-                  />
-                  <div class="text-container">
-                    <h5>Deer Steak with Potatoes</h5>
-                    <p class="text">
-                      Welcome to Risotto restaurant website. here we try to
-                      share
-                    </p>
-                  </div>
-                  <p class="price">$25</p>
-                </div>
-                <div class="grid-el">
-                  <img
-                    class="img-grid-menu"
-                    src="./public/img/menu_image_1.jpg"
-                    alt=""
-                  />
-                  <div class="text-container">
-                    <h5>Deer Steak with Potatoes</h5>
-                    <p class="text">
-                      Welcome to Risotto restaurant website. here we try to
-                      share
-                    </p>
-                  </div>
-                  <p class="price">$25</p>
-                </div>
-                <div class="grid-el">
-                  <img
-                    class="img-grid-menu"
-                    src="./public/img/menu_image_1.jpg"
-                    alt=""
-                  />
-                  <div class="text-container">
-                    <h5>Deer Steak with Potatoes</h5>
-                    <p class="text">
-                      Welcome to Risotto restaurant website. here we try to
-                      share
-                    </p>
-                  </div>
-                  <p class="price">$25</p>
-                </div>
-                <div class="grid-el">
-                  <img
-                    class="img-grid-menu"
-                    src="./public/img/menu_image_1.jpg"
-                    alt=""
-                  />
-                  <div class="text-container">
-                    <h5>Deer Steak with Potatoes</h5>
-                    <p class="text">
-                      Welcome to Risotto restaurant website. here we try to
-                      share
-                    </p>
-                  </div>
-                  <p class="price">$25</p>
-                </div>
-                <div class="grid-el">
-                  <img
-                    class="img-grid-menu"
-                    src="./public/img/menu_image_1.jpg"
-                    alt=""
-                  />
-                  <div class="text-container">
-                    <h5>Deer Steak with Potatoes</h5>
-                    <p class="text">
-                      Welcome to Risotto restaurant website. here we try to
-                      share
-                    </p>
-                  </div>
-                  <p class="price">$25</p>
-                </div>
-                <div class="grid-el">
-                  <img
-                    class="img-grid-menu"
-                    src="./public/img/menu_image_1.jpg"
-                    alt=""
-                  />
-                  <div class="text-container">
-                    <h5>Deer Steak with Potatoes</h5>
-                    <p class="text">
-                      Welcome to Risotto restaurant website. here we try to
-                      share
-                    </p>
-                  </div>
-                  <p class="price">$25</p>
-                </div>
-                <div class="grid-el">
-                  <img
-                    class="img-grid-menu"
-                    src="./public/img/menu_image_1.jpg"
-                    alt=""
-                  />
-                  <div class="text-container">
-                    <h5>Deer Steak with Potatoes</h5>
-                    <p class="text">
-                      Welcome to Risotto restaurant website. here we try to
-                      share
-                    </p>
-                  </div>
-                  <p class="price">$25</p>
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
+            </form>
 
-      <!-- this section contains the team -->
-      <section id="team" class="chef">
-        <div class="secondary__heading-box">
-          <h2 class="heading__secondary">
-            <span class="heading__secondary-red">meet </span>our Chefs
-          </h2>
-          <img src="./public/img/decoration_line.png" alt="" />
-        </div>
-
-        <article class="chef__box">
-          <div class="chef-person">
-            <img src="./public/img/chef1.png" alt="" />
-            <p>Lorem Ipsum</p>
-          </div>
-          <div class="chef-person">
-            <img src="./public/img/chef2.png" alt="" />
-            <p>Lorem Ipsum</p>
-          </div>
-          <div class="chef-person">
-            <img src="./public/img/chef3.png" alt="" />
-            <p>Lorem Ipsum</p>
-          </div>
-          <div class="chef-person">
-            <img src="./public/img/chef4.png" alt="" />
-            <p>Lorem Ipsum</p>
+            <a href="#" class="btn-perso btn-link">BOOK NOW</a>
           </div>
         </article>
-      </section>
-      <!-- this section contains the booking section and the blog section -->
-      <section class="big__box booking-blog">
-        <div class="big__box-container">
-          <img
-            class="img-corner-box br"
-            src="./public/img/box-bottom_right-grey.png"
-            alt=""
-          />
-          <img
-            class="img-corner-box bl"
-            src="./public/img/box-bottom-left-grey.png"
-            alt=""
-          />
-          <img
-            class="img-corner-box tl"
-            src="./public/img/box-left-top-grey.png"
-            alt=""
-          />
-          <img
-            class="img-corner-box tr"
-            src="./public/img/box-right-top-grey.png"
-            alt=""
-          />
-          <article id="book" class="booking">
-            <div class="secondary__heading-box">
-              <h2 class="heading__secondary">
-                <span class="heading__secondary-red">book </span>Your Table
-              </h2>
-              <img src="./public/img/decoration_line.png" alt="" />
+        <article id="blog" class="blog">
+          <div class="secondary__heading-box">
+            <h2 class="heading__secondary">
+              <span class="heading__secondary-red">our </span>Blog
+            </h2>
+            <img src="./public/img/decoration_line.png" alt="" />
+          </div>
+          <div class="card-box">
+            <div class="card">
+              <div class="img-card">
+                <img src="./public/img/blog_img1.jpg" alt="" />
+                <div class="text-card">
+                  <h4>
+                    <b>12</b> April 2017/ <b>20</b> Comment/ <b>35</b> Likes
+                  </h4>
+                  <h3>Lorem Ipsum</h3>
+                  <p>
+                    Lorem ipsum dolor, sit amet consect etur adipi sicing
+                    elit. Dolori bus mollitia eos qui.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="form-container">
+            <div class="card">
+              <div class="img-card">
+                <img src="./public/img/blog_img2.jpg" alt="" />
+                <div class="text-card">
+                  <h4>
+                    <b>12</b> April 2017/ <b>20</b> Comment/ <b>35</b> Likes
+                  </h4>
+                  <h3>Lorem Ipsum</h3>
+                  <p>
+                    Lorem ipsum dolor, sit amet consect etur adipi sicing
+                    elit. Dolori bus mollitia eos qui.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="btn-perso" href="#">know more</a>
+        </article>
+      </div>
+    </section>
+    <!-- this section is the testimonials -->
+    <section id="testimonials" class="testimonials">
+      <div class="secondary__heading-box">
+        <h2 class="heading__secondary">
+          <span class="heading__secondary-red">CLIENT </span>Testimonials
+        </h2>
+        <img src="./public/img/decoration_line.png" alt="" />
+      </div>
+
+      <div class="testimonials-box">
+        <div class="big-test">
+          <img class="img-testimonials" src="./public/img/testimonial1.jpg" alt="" />
+          <div class="testimonials-el">
+            <div class="inner-text">
+              <h4>Lorem Ipsum</h4>
+              <h5>Manager</h5>
               <p>
-                For any query please call us at: <span>+91-1234567890</span>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure
+                repudiandae veritatis suscipit. Eaque, pariatur
+                exercitationem.
               </p>
-              <form action="">
-                <div class="form-grid">
-                  <div class="sub-grid">
-                    <input type="text" placeholder="Enter Full Name" />
-                    <input type="tel" placeholder="Phone Number" />
-                    <input type="datetime" placeholder="Date" />
-                    <select>
-                      <option value="occasion">Ocassion</option>
-                      <option value="">Marriage</option>
-                      <option value="anniversaire">Anniversaire</option>
-                      <option value="entretien">Entretien</option>
-                    </select>
-                  </div>
-                  <div class="sub-grid">
-                    <input type="text" placeholder="Enter Id" />
-                    <select>
-                      <option value="occasion">No Of Person</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                    </select>
-                    <input type="datetime" placeholder="Time" />
-                    <select>
-                      <option value="occasion">Cuisine</option>
-                      <option value="">orientale</option>
-                      <option value="anniversaire">asiatique</option>
-                      <option value="entretien">méditerranéenne</option>
-                    </select>
-                  </div>
-                </div>
-              </form>
-
-              <a href="#" class="btn-perso btn-link">BOOK NOW</a>
-            </div>
-          </article>
-          <article id="blog" class="blog">
-            <div class="secondary__heading-box">
-              <h2 class="heading__secondary">
-                <span class="heading__secondary-red">our </span>Blog
-              </h2>
-              <img src="./public/img/decoration_line.png" alt="" />
-            </div>
-            <div class="card-box">
-              <div class="card">
-                <div class="img-card">
-                  <img src="./public/img/blog_img1.jpg" alt="" />
-                  <div class="text-card">
-                    <h4>
-                      <b>12</b> April 2017/ <b>20</b> Comment/ <b>35</b> Likes
-                    </h4>
-                    <h3>Lorem Ipsum</h3>
-                    <p>
-                      Lorem ipsum dolor, sit amet consect etur adipi sicing
-                      elit. Dolori bus mollitia eos qui.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="img-card">
-                  <img src="./public/img/blog_img2.jpg" alt="" />
-                  <div class="text-card">
-                    <h4>
-                      <b>12</b> April 2017/ <b>20</b> Comment/ <b>35</b> Likes
-                    </h4>
-                    <h3>Lorem Ipsum</h3>
-                    <p>
-                      Lorem ipsum dolor, sit amet consect etur adipi sicing
-                      elit. Dolori bus mollitia eos qui.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <a class="btn-perso" href="#">know more</a>
-          </article>
-        </div>
-      </section>
-      <!-- this section is the testimonials -->
-      <section id="testimonials" class="testimonials">
-        <div class="secondary__heading-box">
-          <h2 class="heading__secondary">
-            <span class="heading__secondary-red">CLIENT </span>Testimonials
-          </h2>
-          <img src="./public/img/decoration_line.png" alt="" />
-        </div>
-
-        <div class="testimonials-box">
-          <div class="big-test">
-            <img
-              class="img-testimonials"
-              src="./public/img/testimonial1.jpg"
-              alt=""
-            />
-            <div class="testimonials-el">
-              <div class="inner-text">
-                <h4>Lorem Ipsum</h4>
-                <h5>Manager</h5>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure
-                  repudiandae veritatis suscipit. Eaque, pariatur
-                  exercitationem.
-                </p>
-              </div>
             </div>
           </div>
-          <div class="big-test">
-            <div class="testimonials-el">
-              <div class="inner-text">
-                <h4>Lorem Ipsum</h4>
-                <h5>Manager</h5>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure
-                  repudiandae veritatis suscipit. Eaque, pariatur
-                  exercitationem.
-                </p>
-              </div>
+        </div>
+        <div class="big-test">
+          <div class="testimonials-el">
+            <div class="inner-text">
+              <h4>Lorem Ipsum</h4>
+              <h5>Manager</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure
+                repudiandae veritatis suscipit. Eaque, pariatur
+                exercitationem.
+              </p>
             </div>
-
-            <img
-              class="img-testimonials"
-              src="./public/img/testimonial1.jpg"
-              alt=""
-            />
           </div>
-        </div>
-      </section>
 
-      <!-- this section is the contact -->
-      <section id="contact" class="contact">
-        <div class="secondary__heading-box">
-          <h2 class="heading__secondary">
-            <span class="heading__secondary-red">our </span>Contact
-          </h2>
-          <img src="./public/img/decoration_line.png" alt="" />
+          <img class="img-testimonials" src="./public/img/testimonial1.jpg" alt="" />
         </div>
+      </div>
+    </section>
 
-        <div class="contact-box">
-          <i class="fa-solid fa-location-dot"></i>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+    <!-- this section is the contact -->
+    <section id="contact" class="contact">
+      <div class="secondary__heading-box">
+        <h2 class="heading__secondary">
+          <span class="heading__secondary-red">our </span>Contact
+        </h2>
+        <img src="./public/img/decoration_line.png" alt="" />
+      </div>
+
+      <div class="contact-box">
+        <i class="fa-solid fa-location-dot"></i>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
+        </p>
+        <hr />
+        <i class="fa-solid fa-phone"></i>
+        <p>+91-9876543210</p>
+        <hr />
+        <i class="fa-solid fa-envelope"></i>
+        <p>abc@abc.com</p>
+      </div>
+    </section>
+
+    <!-- this section is the footer and contains two sub-footers -->
+    <footer id="footer">
+      <section class="socials">
+        <div class="socials-box">
+          <h3>ABOUT US</h3>
+          <p class="text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Perferendis, non obcaecati ratione magnam ipsum ipsa recusandae
+            alias nam in aspernatur porro vel voluptates deserunt doloribus
+            dolore voluptatem temporibus iste molestiae laudantium
+            consectetur. Sint, laudantium odio ex.......
           </p>
-          <hr />
-          <i class="fa-solid fa-phone"></i>
-          <p>+91-9876543210</p>
-          <hr />
-          <i class="fa-solid fa-envelope"></i>
-          <p>abc@abc.com</p>
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-google-plus-g"></i>
+            <i class="fa-brands fa-pinterest-p"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+          </div>
+        </div>
+        <div class="socials-box">
+          <h3>INSTAGRAM</h3>
+          <div class="grid">
+            <img src="./public/img/instragram_gallery_img1.jpg" alt="" />
+            <img src="./public/img/instragram_gallery_img2.jpg" alt="" />
+            <img src="./public/img/instragram_gallery_img1.jpg" alt="" />
+            <img src="./public/img/instragram_gallery_img2.jpg" alt="" />
+            <img src="./public/img/instragram_gallery_img1.jpg" alt="" />
+            <img src="./public/img/instragram_gallery_img2.jpg" alt="" />
+            <img src="./public/img/instragram_gallery_img1.jpg" alt="" />
+            <img src="./public/img/instragram_gallery_img2.jpg" alt="" />
+          </div>
+        </div>
+        <div class="socials-box">
+          <h3>POPULAR TAGS</h3>
+          <div class="tags">
+            <p>Restaurant</p>
+            <p>Responsive Design</p>
+            <p>Hotel</p>
+            <p>Blog Section</p>
+            <p>SEO</p>
+            <p>Cuisine</p>
+            <p>Graphic</p>
+            <p>Food</p>
+          </div>
         </div>
       </section>
+      <section class="footer"></section>
+    </footer>
+  </main>
+</body>
 
-      <!-- this section is the footer and contains two sub-footers -->
-      <footer id="footer">
-        <section class="socials">
-          <div class="socials-box">
-            <h3>ABOUT US</h3>
-            <p class="text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Perferendis, non obcaecati ratione magnam ipsum ipsa recusandae
-              alias nam in aspernatur porro vel voluptates deserunt doloribus
-              dolore voluptatem temporibus iste molestiae laudantium
-              consectetur. Sint, laudantium odio ex.......
-            </p>
-            <div class="icons">
-              <i class="fa-brands fa-facebook-f"></i>
-              <i class="fa-brands fa-google-plus-g"></i>
-              <i class="fa-brands fa-pinterest-p"></i>
-              <i class="fa-brands fa-linkedin-in"></i>
-            </div>
-          </div>
-          <div class="socials-box">
-            <h3>INSTAGRAM</h3>
-            <div class="grid">
-              <img src="./public/img/instragram_gallery_img1.jpg" alt="" />
-              <img src="./public/img/instragram_gallery_img2.jpg" alt="" />
-              <img src="./public/img/instragram_gallery_img1.jpg" alt="" />
-              <img src="./public/img/instragram_gallery_img2.jpg" alt="" />
-              <img src="./public/img/instragram_gallery_img1.jpg" alt="" />
-              <img src="./public/img/instragram_gallery_img2.jpg" alt="" />
-              <img src="./public/img/instragram_gallery_img1.jpg" alt="" />
-              <img src="./public/img/instragram_gallery_img2.jpg" alt="" />
-            </div>
-          </div>
-          <div class="socials-box">
-            <h3>POPULAR TAGS</h3>
-            <div class="tags">
-              <p>Restaurant</p>
-              <p>Responsive Design</p>
-              <p>Hotel</p>
-              <p>Blog Section</p>
-              <p>SEO</p>
-              <p>Cuisine</p>
-              <p>Graphic</p>
-              <p>Food</p>
-            </div>
-          </div>
-        </section>
-        <section class="footer"></section>
-      </footer>
-    </main>
-  </body>
 </html>
