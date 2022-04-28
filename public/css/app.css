@@ -15991,23 +15991,23 @@ readers do not read off random characters that represent icons */
 }
 .info__about p {
   font-size: 1.6rem;
-  width: 40%;
+  width: 55%;
   padding: 6.4rem;
 }
 @media (max-width: 1320px) {
   .info__about p {
-    width: 60%;
+    width: 70%;
   }
 }
 @media (max-width: 768px) {
   .info__about p {
     padding: 3rem;
-    width: 80%;
+    width: 85%;
   }
 }
 @media (max-width: 437px) {
   .info__about p {
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -16046,6 +16046,9 @@ readers do not read off random characters that represent icons */
   color: hsl(0deg, 0%, 0%);
   font-family: "Courgette";
   padding-bottom: 1rem;
+}
+.menu-list a:hover i {
+  color: hsl(353deg, 77%, 39%);
 }
 
 .breakfast,

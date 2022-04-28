@@ -9,20 +9,20 @@
 
   p {
     @include responsive(bpl) {
-      width: 60%;
+      width: 70%;
     }
 
     @include responsive(tablet) {
       padding: 3rem;
-      width: 80%;
+      width: 85%;
     }
 
     @include responsive(phone) {
-      width: 90%;
+      width: 100%;
     }
 
     font-size: 1.6rem;
-    width: 40%;
+    width: 55%;
     padding: 6.4rem;
   }
 }
