@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- lien vers le css -->
-    <link rel="stylesheet" href="./public/css/app.css" />
 
     <title>Les chefs</title>
     <script
@@ -13,32 +12,34 @@
       defer
     ></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.js" defer></script>
+    <script src="./public/js/app.js" defer></script>
+    <link rel="stylesheet" href="./public/css/app.css" />
   </head>
 
   <body>
     <!-- j'utilise au plus possible la convention BEM pour nommer mes .classes et #ID's -->
     <!-- le .header contient l'image en background la nav le h1, en gros toute la section Hero -->
-    <header class="header header__bg-img">
+    <header class="header__bg-img">
       <!-- Navigation principale en flex-box le code de styling ce trouve dans le header.scss -->
 
       <nav class="header__nav">
         <!-- les 4 premiers liens de la nav -->
         <div class="header__nav-box">
           <a href="#" class="header__nav-box-link">home</a>
-          <a href="#" class="header__nav-box-link">about us</a>
-          <a href="#" class="header__nav-box-link">menu list</a>
-          <a href="#" class="header__nav-box-link">team</a>
+          <a href="#about" class="header__nav-box-link">about us</a>
+          <a href="#menu" class="header__nav-box-link">menu list</a>
+          <a href="#team" class="header__nav-box-link">team</a>
         </div>
 
-        <a class="header__nav-logo-link" href=""
+        <a class="header__nav-logo-link" href="#"
           ><img class="header__nav-logo" src="./public/img/logo.png" alt=""
         /></a>
         <!-- les 4 derniers liens de la nav -->
         <div class="header__nav-box">
-          <a href="#" class="header__nav-box-link">reservation</a>
-          <a href="#" class="header__nav-box-link">blog</a>
-          <a href="#" class="header__nav-box-link">testimonials</a>
-          <a href="#" class="header__nav-box-link">contact us</a>
+          <a href="#book" class="header__nav-box-link">reservation</a>
+          <a href="#blog" class="header__nav-box-link">blog</a>
+          <a href="#testimonials" class="header__nav-box-link">testimonials</a>
+          <a href="#contact" class="header__nav-box-link">contact us</a>
         </div>
       </nav>
 
@@ -135,7 +136,8 @@
       </div>
     </header>
     <main>
-      <section class="big__box">
+      <!-- this section contains the about and the menu -->
+      <section id="about" class="big__box about-menu">
         <div class="big__box-container">
           <img
             class="img-corner-box br"
@@ -177,7 +179,7 @@
               eligendi temporibus laudantium iste cum est praesentium.
               Excepturi, ut temporibus.
             </p>
-            <div class="secondary__heading-box">
+            <div id="menu" class="secondary__heading-box">
               <h2 class="heading__secondary">
                 <span class="heading__secondary-red">our </span>Menu List
               </h2>
@@ -187,7 +189,9 @@
           <article class="info__menu"></article>
         </div>
       </section>
-      <section class="chef">
+
+      <!-- this section contains the team -->
+      <section id="team" class="chef">
         <div class="secondary__heading-box">
           <h2 class="heading__secondary">
             <span class="heading__secondary-red">meet </span>our Chefs
@@ -214,7 +218,8 @@
           </div>
         </article>
       </section>
-      <section class="big__box">
+      <!-- this section contains the booking section and the blog section -->
+      <section class="big__box booking-blog">
         <div class="big__box-container">
           <img
             class="img-corner-box br"
@@ -236,7 +241,7 @@
             src="./public/img/box-right-top-grey.png"
             alt=""
           />
-          <article class="booking">
+          <article id="book" class="booking">
             <div class="secondary__heading-box">
               <h2 class="heading__secondary">
                 <span class="heading__secondary-red">book </span>Your Table
@@ -283,7 +288,7 @@
               <a href="#" class="btn-perso btn-link">BOOK NOW</a>
             </div>
           </article>
-          <article class="blog">
+          <article id="blog" class="blog">
             <div class="secondary__heading-box">
               <h2 class="heading__secondary">
                 <span class="heading__secondary-red">our </span>Blog
@@ -326,7 +331,8 @@
           </article>
         </div>
       </section>
-      <section class="testimonials">
+      <!-- this section is the testimonials -->
+      <section id="testimonials" class="testimonials">
         <div class="secondary__heading-box">
           <h2 class="heading__secondary">
             <span class="heading__secondary-red">CLIENT </span>Testimonials
@@ -368,7 +374,9 @@
           />
         </div>
       </section>
-      <section class="contact">
+
+      <!-- this section is the contact -->
+      <section id="contact" class="contact">
         <div class="secondary__heading-box">
           <h2 class="heading__secondary">
             <span class="heading__secondary-red">our </span>Contact
@@ -391,7 +399,8 @@
         </div>
       </section>
 
-      <footer>
+      <!-- this section is the footer and contains two sub-footers -->
+      <footer id="footer">
         <section class="socials">
           <div class="socials-box">
             <h3>ABOUT US</h3>
