@@ -1,21 +1,26 @@
 // les breakpoints sont fait en fonction du cassage du design
 
 @mixin responsive($breakpoint) {
-    @if $breakpoint==phone {
-        @media (max-width: 320px) {
-            @content;
-        }
+  @if $breakpoint==phone {
+    @media (max-width: 437px) {
+      @content;
     }
+  }
 
-    @if $breakpoint==tablet {
-        @media (max-width: 768px) {
-            @content;
-        }
+  @if $breakpoint==tablet {
+    @media (max-width: 768px) {
+      @content;
     }
+  }
 
-    @if $breakpoint==tablet-p {
-        @media (max-width: 1024px) {
-            @content;
-        }
+  @if $breakpoint==tablet-p {
+    @media (max-width: 1024px) {
+      @content;
     }
+  }
+  @if $breakpoint==bpl {
+    @media (max-width: 1320px) {
+      @content;
+    }
+  }
 }

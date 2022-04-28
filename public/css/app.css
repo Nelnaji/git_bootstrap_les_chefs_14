@@ -18,6 +18,21 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
+@media (max-width: 1024px) {
+  html {
+    font-size: 60%;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 58%;
+  }
+}
+@media (max-width: 437px) {
+  html {
+    font-size: 55%;
+  }
+}
 
 body {
   font-family: "Roboto", sans-serif;
@@ -15188,6 +15203,21 @@ readers do not read off random characters that represent icons */
   background-color: hsl(0deg, 0%, 100%);
   border: 1px solid hsl(0deg, 0%, 66%);
 }
+@media (max-width: 1320px) {
+  .big__box .big__box-container {
+    width: 95%;
+  }
+}
+@media (max-width: 1024px) {
+  .big__box .big__box-container {
+    width: 98%;
+  }
+}
+@media (max-width: 437px) {
+  .big__box .big__box-container {
+    width: 100%;
+  }
+}
 .big__box .big__box-container .img-corner-box {
   position: absolute;
 }
@@ -15258,6 +15288,20 @@ readers do not read off random characters that represent icons */
   margin-top: 10rem;
 }
 
+/* MOBILE */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mobile-nav {
+  font-size: 4.8rem;
+  color: hsl(0deg, 0%, 100%);
+}
+
+/* MOBILE NAVIGATION */
 .header__bg-img {
   height: 102vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/banner1.jpg);
@@ -15283,6 +15327,7 @@ readers do not read off random characters that represent icons */
 }
 .header__nav .header__nav-box a:link,
 .header__nav .header__nav-box a:visited {
+  display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
   color: hsl(0deg, 0%, 100%);
@@ -15386,6 +15431,21 @@ readers do not read off random characters that represent icons */
   width: 40%;
   padding: 6.4rem;
 }
+@media (max-width: 1320px) {
+  .info__about p {
+    width: 60%;
+  }
+}
+@media (max-width: 768px) {
+  .info__about p {
+    width: 80%;
+  }
+}
+@media (max-width: 437px) {
+  .info__about p {
+    width: 90%;
+  }
+}
 
 .menu-container {
   display: grid;
@@ -15393,13 +15453,23 @@ readers do not read off random characters that represent icons */
   gap: 1rem;
   padding-bottom: 8rem;
 }
+@media (max-width: 1024px) {
+  .menu-container {
+    grid-template-columns: 1fr;
+  }
+}
 
 .menu-list {
   display: flex;
   flex-direction: column;
   font-size: 3rem;
-  gap: 1rem;
   border-right: 1px solid hsl(0deg, 2%, 88%);
+}
+@media (max-width: 1024px) {
+  .menu-list {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 .menu-list a {
   text-decoration: none;
@@ -15408,15 +15478,22 @@ readers do not read off random characters that represent icons */
   padding-bottom: 1rem;
 }
 
-.flex-el {
+.breakfast,
+.lunch,
+.dinner,
+.snacks {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
   text-transform: capitalize;
   border-bottom: 1px solid hsl(0deg, 2%, 88%);
+  transition: all 0.2s;
+  padding-bottom: 1rem;
 }
-.flex-el i {
+.breakfast i,
+.lunch i,
+.dinner i,
+.snacks i {
   font-size: 7rem;
   color: hsl(0deg, 2%, 88%);
   padding: 1rem 0;
@@ -15425,6 +15502,12 @@ readers do not read off random characters that represent icons */
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  row-gap: 1rem;
+}
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .grid-el {
@@ -15433,12 +15516,12 @@ readers do not read off random characters that represent icons */
   align-items: center;
   gap: 1rem;
   border-bottom: 1px solid hsl(0deg, 2%, 88%);
-  padding: 1rem;
   width: 90%;
 }
 .grid-el img {
   border-radius: 50%;
   border: 0.5rem solid hsl(0deg, 2%, 88%);
+  margin-bottom: 1rem;
 }
 .grid-el h5 {
   color: hsl(0deg, 0%, 0%);
@@ -15448,6 +15531,28 @@ readers do not read off random characters that represent icons */
   background-color: hsl(0deg, 2%, 88%);
   color: hsl(353deg, 77%, 49%);
   font-weight: 600;
+}
+
+.breakfast:focus,
+.dinner:focus,
+.lunch:focus,
+.snacks:focus {
+  border-right: 0.6rem solid hsl(353deg, 77%, 49%);
+}
+@media (max-width: 1024px) {
+  .breakfast:focus,
+.dinner:focus,
+.lunch:focus,
+.snacks:focus {
+    border-bottom: 0.6rem solid hsl(353deg, 77%, 49%);
+    border-right: none;
+  }
+}
+.breakfast:focus i,
+.dinner:focus i,
+.lunch:focus i,
+.snacks:focus i {
+  color: hsl(353deg, 77%, 49%);
 }
 
 .chef {
@@ -15468,6 +15573,11 @@ readers do not read off random characters that represent icons */
   text-align: center;
   justify-content: space-evenly;
 }
+@media (max-width: 1024px) {
+  .chef .chef__box {
+    flex-wrap: wrap;
+  }
+}
 
 .chef-person img {
   border-bottom: 1px solid hsl(0deg, 0%, 33%);
@@ -15475,6 +15585,7 @@ readers do not read off random characters that represent icons */
 .chef-person p {
   font-size: 1.6rem;
   color: hsl(0deg, 0%, 100%);
+  margin-bottom: 3rem;
 }
 
 .booking {
@@ -15494,9 +15605,19 @@ readers do not read off random characters that represent icons */
   justify-content: center;
   gap: 8rem;
   font-size: 2rem;
-  width: 60%;
+  width: 65%;
   border-radius: 1.4rem;
   padding: 8rem 0;
+}
+@media (max-width: 1320px) {
+  .form-container {
+    width: 80%;
+  }
+}
+@media (max-width: 1024px) {
+  .form-container {
+    width: 100%;
+  }
 }
 .form-container p span {
   font-size: 3rem;
@@ -15505,6 +15626,11 @@ readers do not read off random characters that represent icons */
 .form-grid {
   display: flex;
   gap: 4rem;
+}
+@media (max-width: 768px) {
+  .form-grid {
+    flex-direction: column;
+  }
 }
 .form-grid .sub-grid {
   display: flex;
@@ -15527,9 +15653,20 @@ readers do not read off random characters that represent icons */
   gap: 8rem;
   margin: 5rem;
 }
+@media (max-width: 1024px) {
+  .blog {
+    margin: auto;
+  }
+}
 .blog .card-box {
   display: flex;
   gap: 3rem;
+}
+@media (max-width: 1320px) {
+  .blog .card-box {
+    flex-direction: column;
+    gap: 20rem;
+  }
 }
 .blog .btn-perso {
   margin-top: 7rem;
@@ -15573,6 +15710,13 @@ readers do not read off random characters that represent icons */
   margin: 1rem 0;
 }
 
+@media (max-width: 768px) {
+  .img-card {
+    width: 80vw;
+    margin-inline: auto;
+  }
+}
+
 .testimonials {
   display: flex;
   flex-direction: column;
@@ -15583,19 +15727,46 @@ readers do not read off random characters that represent icons */
   gap: 5rem;
   padding: 5rem 0;
 }
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 2rem 0;
+  }
+}
 
 .testimonials-box {
   display: flex;
-  flex-grow: 0;
-  flex-shrink: 1;
   justify-content: center;
   gap: 3rem;
+}
+@media (max-width: 1320px) {
+  .testimonials-box {
+    flex-direction: column;
+  }
+}
+
+.big-test {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+  padding: 2rem;
+}
+@media (max-width: 768px) {
+  .big-test {
+    gap: 0.5rem;
+    padding: 0.5rem;
+    justify-content: center;
+  }
 }
 
 .img-testimonials {
   border: 0.5rem solid hsl(0deg, 2%, 88%);
   border-radius: 50%;
-  width: 10%;
+  width: 40%;
+}
+@media (max-width: 1320px) {
+  .img-testimonials {
+    width: 20%;
+  }
 }
 
 .testimonials-el {
@@ -15604,7 +15775,11 @@ readers do not read off random characters that represent icons */
   border: 1px solid hsl(0deg, 2%, 88%);
   border-radius: 1rem;
   padding: 1rem 0.5rem;
-  width: 20%;
+}
+@media (max-width: 1024px) {
+  .testimonials-el {
+    width: 60%;
+  }
 }
 
 h4 {
@@ -15625,7 +15800,7 @@ p {
 
 .contact {
   background-image: url(../img/main_bg.jpg);
-  padding: 6rem 0;
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
 }
@@ -15644,6 +15819,21 @@ p {
   font-size: 3rem;
   text-align: center;
   gap: 1rem;
+}
+@media (max-width: 1320px) {
+  .contact-box {
+    width: 50%;
+  }
+}
+@media (max-width: 1024px) {
+  .contact-box {
+    width: 70%;
+  }
+}
+@media (max-width: 437px) {
+  .contact-box {
+    width: 90%;
+  }
 }
 .contact-box i {
   font-size: 6rem;
@@ -15664,6 +15854,13 @@ p {
   padding: 5rem;
   gap: 5rem;
 }
+@media (max-width: 1024px) {
+  .socials {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .socials h3 {
   font-size: 2.6rem;
   padding-bottom: 3rem;
@@ -15673,11 +15870,36 @@ p {
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
+@media (max-width: 768px) {
+  .socials .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 437px) {
+  .socials .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .socials .grid img {
   width: 100%;
 }
 .socials .socials-box {
   width: 33%;
+}
+@media (max-width: 1024px) {
+  .socials .socials-box {
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .socials .socials-box {
+    width: 90%;
+  }
+}
+@media (max-width: 437px) {
+  .socials .socials-box {
+    width: 100%;
+  }
 }
 
 .tags {

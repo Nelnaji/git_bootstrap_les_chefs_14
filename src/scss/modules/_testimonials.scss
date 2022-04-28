@@ -7,19 +7,37 @@
   color: $white;
   gap: 5rem;
   padding: 5rem 0;
+  @include responsive(tablet) {
+    padding: 2rem 0;
+  }
 }
 
 .testimonials-box {
   display: flex;
-  flex-grow: 0;
-  flex-shrink: 1;
   justify-content: center;
   gap: 3rem;
+  @include responsive(bpl) {
+    flex-direction: column;
+  }
+}
+.big-test {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+  padding: 2rem;
+  @include responsive(tablet) {
+    gap: 0.5rem;
+    padding: 0.5rem;
+    justify-content: center;
+  }
 }
 .img-testimonials {
   border: 0.5rem solid $b-img;
   border-radius: 50%;
-  width: 10%;
+  width: 40%;
+  @include responsive(bpl) {
+    width: 20%;
+  }
 }
 
 .testimonials-el {
@@ -28,7 +46,9 @@
   border: 1px solid $b-img;
   border-radius: 1rem;
   padding: 1rem 0.5rem;
-  width: 20%;
+  @include responsive(tablet-p) {
+    width: 60%;
+  }
 }
 
 h4 {

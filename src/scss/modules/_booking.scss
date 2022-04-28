@@ -14,9 +14,15 @@
   justify-content: center;
   gap: 8rem;
   font-size: 2rem;
-  width: 60%;
+  width: 65%;
   border-radius: 1.4rem;
   padding: 8rem 0;
+  @include responsive(bpl) {
+    width: 80%;
+  }
+  @include responsive(tablet-p) {
+    width: 100%;
+  }
   p {
     span {
       font-size: 3rem;
@@ -27,7 +33,9 @@
 .form-grid {
   display: flex;
   gap: 4rem;
-
+  @include responsive(tablet) {
+    flex-direction: column;
+  }
   .sub-grid {
     display: flex;
     flex-direction: column;

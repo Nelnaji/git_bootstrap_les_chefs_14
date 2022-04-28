@@ -30,6 +30,7 @@
 
     a:link,
     a:visited {
+      display: inline-block;
       text-decoration: none;
       text-transform: uppercase;
       color: $white;

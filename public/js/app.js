@@ -1,3 +1,13 @@
+///////////////////////////////////////////////////////////
+// Make mobile navigation work
+
+const btnNavEl = document.querySelector(".btn-mobile-nav");
+const headerEl = document.querySelector(".header__nav");
+
+btnNavEl.addEventListener("click", function () {
+  headerEl.classList.toggle("nav-open");
+});
+
 // Ceci vas ajouter du smoorth scrolling
 
 const allLinks = document.querySelectorAll("a:link");
@@ -21,7 +31,7 @@ allLinks.forEach(function (link) {
     }
 
     // Close mobile naviagtion
-    if (link.classList.contains("main-nav-link"))
+    if (link.classList.contains("header__nav-box-link"))
       headerEl.classList.toggle("nav-open");
   });
 });
@@ -52,3 +62,30 @@ const obs = new IntersectionObserver(
 );
 
 obs.observe(sectionHeroEl);
+
+// working the menu clicking
+
+document.querySelector(".breakfast").addEventListener("click", function () {
+  const img = document.getElementsByClassName("img-grid-menu");
+  for (let i = 0; i < img.length; i++) {
+    img[i].src = "./public/img/menu_image_1.jpg";
+  }
+});
+document.querySelector(".lunch").addEventListener("click", function () {
+  const img = document.getElementsByClassName("img-grid-menu");
+  for (let i = 0; i < img.length; i++) {
+    img[i].src = "./public/img/menu_image_2.jpg";
+  }
+});
+document.querySelector(".snacks").addEventListener("click", function () {
+  const img = document.getElementsByClassName("img-grid-menu");
+  for (let i = 0; i < img.length; i++) {
+    img[i].src = "./public/img/menu_image_3.jpg";
+  }
+});
+document.querySelector(".dinner").addEventListener("click", function () {
+  const img = document.getElementsByClassName("img-grid-menu");
+  for (let i = 0; i < img.length; i++) {
+    img[i].src = "./public/img/menu_image_4.jpg";
+  }
+});

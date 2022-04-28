@@ -7,6 +7,15 @@
   text-align: center;
   gap: 2rem;
   p {
+    @include responsive(bpl) {
+      width: 60%;
+    }
+    @include responsive(tablet) {
+      width: 80%;
+    }
+    @include responsive(phone) {
+      width: 90%;
+    }
     font-size: 1.6rem;
     width: 40%;
     padding: 6.4rem;

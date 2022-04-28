@@ -15,6 +15,9 @@
     display: flex;
     text-align: center;
     justify-content: space-evenly;
+    @include responsive(tablet-p) {
+      flex-wrap: wrap;
+    }
   }
 }
 .chef-person {
@@ -24,5 +27,6 @@
   p {
     font-size: 1.6rem;
     color: $white;
+    margin-bottom: 3rem;
   }
 }

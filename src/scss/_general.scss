@@ -11,6 +11,15 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  @include responsive(tablet-p) {
+    font-size: 60%;
+  }
+  @include responsive(tablet) {
+    font-size: 58%;
+  }
+  @include responsive(phone) {
+    font-size: 55%;
+  }
 }
 
 body {

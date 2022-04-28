@@ -3,14 +3,20 @@
   grid-template-columns: 1fr 6fr;
   gap: 1rem;
   padding-bottom: 8rem;
+  @include responsive(tablet-p) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .menu-list {
   display: flex;
   flex-direction: column;
   font-size: 3rem;
-  gap: 1rem;
   border-right: 1px solid $b-img;
+  @include responsive(tablet-p) {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 
   a {
     text-decoration: none;
@@ -20,13 +26,17 @@
   }
 }
 
-.flex-el {
+.breakfast,
+.lunch,
+.dinner,
+.snacks {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
   text-transform: capitalize;
   border-bottom: 1px solid $b-img;
+  transition: all 0.2s;
+  padding-bottom: 1rem;
   i {
     font-size: 7rem;
     color: $b-img;
@@ -37,6 +47,10 @@
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  row-gap: 1rem;
+  @include responsive(tablet) {
+    grid-template-columns: 1fr;
+  }
 }
 .grid-el {
   display: flex;
@@ -44,11 +58,11 @@
   align-items: center;
   gap: 1rem;
   border-bottom: 1px solid $b-img;
-  padding: 1rem;
   width: 90%;
   img {
     border-radius: 50%;
     border: 0.5rem solid $b-img;
+    margin-bottom: 1rem;
   }
   h5 {
     color: $black;
@@ -58,5 +72,19 @@
     background-color: $b-img;
     color: $red;
     font-weight: 600;
+  }
+}
+
+.breakfast:focus,
+.dinner:focus,
+.lunch:focus,
+.snacks:focus {
+  @include responsive(tablet-p) {
+    border-bottom: 0.6rem solid $red;
+    border-right: none;
+  }
+  border-right: 0.6rem solid $red;
+  i {
+    color: $red;
   }
 }

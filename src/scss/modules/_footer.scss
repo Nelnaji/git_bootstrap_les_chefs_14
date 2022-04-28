@@ -8,6 +8,11 @@
   color: $white;
   padding: 5rem;
   gap: 5rem;
+  @include responsive(tablet-p) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   h3 {
     font-size: 2.6rem;
     padding-bottom: 3rem;
@@ -15,6 +20,12 @@
   .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    @include responsive(tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include responsive(phone) {
+      grid-template-columns: repeat(2, 1fr);
+    }
     gap: 2rem;
     img {
       width: 100%;
@@ -22,6 +33,15 @@
   }
   .socials-box {
     width: 33%;
+    @include responsive(tablet-p) {
+      width: 80%;
+    }
+    @include responsive(tablet) {
+      width: 90%;
+    }
+    @include responsive(phone) {
+      width: 100%;
+    }
   }
 }
 

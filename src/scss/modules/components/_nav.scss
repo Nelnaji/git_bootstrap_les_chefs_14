@@ -16,3 +16,83 @@
   margin-top: 10rem;
 }
 // ont ajout rem = 100px de margin top a la section hero car quand la barre de navigation passe en sticky elle est sortie du flow de la page.
+
+/* MOBILE */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  font-size: 4.8rem;
+  color: $white;
+}
+
+/* MOBILE NAVIGATION */
+
+// @include responsive(bpl) {
+//   .btn-mobile-nav {
+//     display: block;
+//     z-index: 9999;
+//     color: $white;
+//   }
+
+//   .header__nav {
+//     background-color: rgba(5, 5, 5, 0.9);
+//     -webkit-backdrop-filter: blur(5px);
+//     backdrop-filter: blur(10px);
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100vh;
+//     transform: translateX(100%);
+
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     transition: all 0.5s ease-in;
+
+//     /* Hide navigation */
+//     /* Allows NO transitions at all */
+//     /* display: none; */
+
+//     /* 1) Hide it visually */
+//     opacity: 0;
+
+//     /* 2) Make it unaccessible to mouse and keyboard */
+//     pointer-events: none;
+
+//     /* 3) Hide it from screen readers */
+//     visibility: hidden;
+//     overflow: hidden;
+//   }
+
+//   .nav-open .header__nav {
+//     opacity: 1;
+//     pointer-events: auto;
+//     visibility: visible;
+//     transform: translateX(0);
+//   }
+
+//   .nav-open .icon-mobile-nav .menu {
+//     display: block;
+//   }
+
+//   .nav-open .icon-mobile-nav .close {
+//     display: none;
+//   }
+
+//   .header__nav-box {
+//     flex-direction: column;
+//     gap: 4.8rem;
+//   }
+
+//   .header__nav-box-link:link,
+//   .header__nav-box-link:visited {
+//     font-size: 3rem;
+//   }
+// }

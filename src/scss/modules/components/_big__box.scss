@@ -8,6 +8,16 @@
     position: relative;
     background-color: $white;
     border: 1px solid $b-grey;
+    @include responsive(bpl) {
+      width: 95%;
+    }
+    @include responsive(tablet-p) {
+      width: 98%;
+    }
+
+    @include responsive(phone) {
+      width: 100%;
+    }
     .img-corner-box {
       position: absolute;
     }
